@@ -6,10 +6,10 @@ Leia também o [AGENTS.md](AGENTS.md) (convenções do upstream: comandos, estil
 
 - Somos a equipe de TI da SEMEC (Secretaria Municipal de Economia de Porto Velho/RO), cerca de 7 pessoas.
 - Estamos substituindo o Linear pelo Plane Community Edition, fork de [makeplane/plane](https://github.com/makeplane/plane).
-- Hospedagem: servidor da SMTI (TI da prefeitura), via Portainer, com as imagens oficiais do Docker Hub na versão `v1.4.2`. A stack deriva de `deployments/cli/community/docker-compose.yml`.
-- O fork existe para customizações futuras. Enquanto não houver customização, a stack usa só imagens oficiais.
-- Remotes: `origin` = SEMEC-PVH/plane-custom (GitHub, segue ativo), `gitea` = https://git.portovelho.ro.gov.br/semec/Plane-semec.git, `upstream` = makeplane/plane. Branch de trabalho: `semec`.
-- O build das imagens customizadas é feito a partir do nosso repositório no Gitea (remote `gitea`).
+- Hospedagem (ainda não está no ar): servidor da SMTI (TI da prefeitura), via Portainer, versão `v1.4.2`. A stack deriva de `deployments/cli/community/docker-compose.yml`.
+- O fork existe para customizações futuras. Enquanto não houver customização, a stack usa só imagens oficiais do Docker Hub.
+- Remotes: `origin` = SEMEC-PVH/plane-custom (GitHub, segue ativo), `gitea` = <https://git.portovelho.ro.gov.br/semec/Plane-semec.git>, `upstream` = makeplane/plane. Branch de trabalho: `semec`.
+- Fluxo de entrega: (1) validar localmente, com a mesma stack rodando no Docker da máquina de desenvolvimento; (2) build das imagens customizadas no Gitea, publicadas no registry do Gitea; (3) o Portainer puxa as imagens do registry do Gitea (ele já tem acesso).
 
 ## Mapa do repositório
 
