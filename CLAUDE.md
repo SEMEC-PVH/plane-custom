@@ -9,7 +9,8 @@ Leia também o [AGENTS.md](AGENTS.md) (convenções do upstream: comandos, estil
 - Hospedagem (ainda não está no ar): servidor da SMTI (TI da prefeitura), via Portainer, versão `v1.4.2`. A stack deriva de `deployments/cli/community/docker-compose.yml`.
 - O fork existe para customizações futuras. Enquanto não houver customização, a stack usa só imagens oficiais do Docker Hub.
 - Remotes: `origin` = SEMEC-PVH/plane-custom (GitHub, segue ativo), `gitea` = <https://git.portovelho.ro.gov.br/semec/Plane-semec.git>, `upstream` = makeplane/plane. Branch de trabalho: `semec`.
-- Fluxo de entrega: (1) validar localmente, com a mesma stack rodando no Docker da máquina de desenvolvimento; (2) build das imagens customizadas no Gitea, publicadas no registry do Gitea; (3) o Portainer puxa as imagens do registry do Gitea (ele já tem acesso).
+- Implantação: a stack sobe no Portainer pelo web editor, com as imagens oficiais da `v1.4.2` (`APP_RELEASE=v1.4.2`) e as variáveis no painel de variáveis da stack.
+- Se um dia houver customização: (1) validar localmente, com a mesma stack rodando no Docker da máquina de desenvolvimento; (2) build da imagem do serviço alterado no Gitea, publicada no registry do Gitea; (3) no Portainer, trocar só a imagem desse serviço (o Portainer já acessa o registry do Gitea).
 
 ## Mapa do repositório
 
