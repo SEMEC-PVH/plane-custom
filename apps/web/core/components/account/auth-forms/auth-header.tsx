@@ -7,6 +7,7 @@
 import { observer } from "mobx-react";
 import useSWR from "swr";
 import { useTranslation } from "@plane/i18n";
+import { SemecLockup } from "@plane/propel/icons";
 import type { IWorkspaceMemberInvitation } from "@plane/types";
 // components
 import { LogoSpinner } from "@/components/common/logo-spinner";
@@ -22,37 +23,6 @@ type TAuthHeader = {
   invitationEmail: string | undefined;
   authMode: EAuthModes;
   currentAuthStep: EAuthSteps;
-};
-
-const Titles = {
-  [EAuthModes.SIGN_IN]: {
-    [EAuthSteps.EMAIL]: {
-      header: "Work in all dimensions.",
-      subHeader: "Welcome back to Plane.",
-    },
-    [EAuthSteps.PASSWORD]: {
-      header: "Work in all dimensions.",
-      subHeader: "Welcome back to Plane.",
-    },
-    [EAuthSteps.UNIQUE_CODE]: {
-      header: "Work in all dimensions.",
-      subHeader: "Welcome back to Plane.",
-    },
-  },
-  [EAuthModes.SIGN_UP]: {
-    [EAuthSteps.EMAIL]: {
-      header: "Work in all dimensions.",
-      subHeader: "Create your Plane account.",
-    },
-    [EAuthSteps.PASSWORD]: {
-      header: "Work in all dimensions.",
-      subHeader: "Create your Plane account.",
-    },
-    [EAuthSteps.UNIQUE_CODE]: {
-      header: "Work in all dimensions.",
-      subHeader: "Create your Plane account.",
-    },
-  },
 };
 
 const workSpaceService = new WorkspaceService();
@@ -94,7 +64,8 @@ export const AuthHeader = observer(function AuthHeader(props: TAuthHeader) {
       };
     }
 
-    return Titles[mode][step];
+    // SEMEC: same institutional title for every step and mode
+    return { header: t("semec.auth.title"), subHeader: t("semec.auth.subtitle") };
   };
 
   const { header, subHeader } = getHeaderSubHeader(currentAuthStep, authMode, invitation || undefined, invitationEmail);
@@ -116,9 +87,13 @@ type TAuthHeaderBase = {
 
 export function AuthHeaderBase(props: TAuthHeaderBase) {
   return (
-    <div className="flex flex-col gap-1">
-      <span className="text-h4-semibold text-primary">{props.header}</span>
-      <span className="text-h4-semibold text-placeholder">{props.subHeader}</span>
+    // SEMEC: centered lockup, title and subtitle
+    <div className="flex flex-col items-center text-center">
+      <div className="mb-7 flex justify-center">
+        <SemecLockup height={64} />
+      </div>
+      <span className="text-[28px] leading-tight font-semibold text-primary">{props.header}</span>
+      <span className="mt-1.5 text-[15px] leading-normal text-secondary">{props.subHeader}</span>
     </div>
   );
 }

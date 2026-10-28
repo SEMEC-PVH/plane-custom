@@ -5,3 +5,4 @@
  */
 
 export * from "./header-logo";
+export * from "./auth-shell";

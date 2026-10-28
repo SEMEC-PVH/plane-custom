@@ -72,7 +72,7 @@ export const AuthEmailForm = observer(function AuthEmailForm(props: TAuthEmailFo
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder={t("auth.common.email.placeholder")}
+            placeholder={t("semec.auth.email_placeholder")} // SEMEC
             className={`h-10 w-full border-0 disable-autofill-style placeholder:text-placeholder autofill:bg-danger-primary focus:bg-none active:bg-transparent`}
             autoComplete="off"
             autoFocus

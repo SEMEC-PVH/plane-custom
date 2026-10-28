@@ -129,3 +129,31 @@
     animation: none;
   }
 }
+
+/* ---------- Tela de login: horizonte de Porto Velho ---------- */
+.semec-auth {
+  --semec-art-h: min(36vh, 360px);
+}
+
+.semec-auth-content {
+  padding-bottom: calc(var(--semec-art-h) - 24px);
+}
+
+.semec-auth-art {
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  z-index: 0;
+  width: min(100vw, calc(var(--semec-art-h) * 2.0757));
+  height: var(--semec-art-h);
+  transform: translateX(-50%);
+  pointer-events: none;
+  -webkit-mask-image:
+    linear-gradient(to top, transparent, #000 8%, #000 60%, transparent),
+    linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to top, transparent, #000 8%, #000 60%, transparent),
+    linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-composite: intersect;
+}

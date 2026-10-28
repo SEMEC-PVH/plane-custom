@@ -22,7 +22,6 @@ import {
 import { useOAuthConfig } from "@/hooks/oauth";
 import { useInstance } from "@/hooks/store/use-instance";
 // local imports
-import { TermsAndConditions } from "../terms-and-conditions";
 import { AuthBanner } from "./auth-banner";
 import { AuthHeader, AuthHeaderBase } from "./auth-header";
 import { AuthFormRoot } from "./form-root";
@@ -144,7 +143,7 @@ export const AuthRoot = observer(function AuthRoot(props: TAuthRoot) {
           currentAuthMode={currentAuthMode}
         />
       )}
-      <TermsAndConditions authType={authMode} />
+      {/* SEMEC: no terms of service of plane.so */}
     </AuthContainer>
   );
 });

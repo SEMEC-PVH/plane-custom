@@ -9,6 +9,8 @@ import { EAuthModes } from "@plane/constants";
 // components
 import { ResetPasswordForm } from "@/components/account/auth-forms/reset-password";
 import { AuthHeader } from "@/components/auth-screens/header";
+// SEMEC
+import { SemecAuthShell } from "@/components/semec/brand";
 // helpers
 import { EPageTypes } from "@/helpers/authentication.helper";
 // layouts
@@ -19,10 +21,10 @@ function ResetPasswordPage() {
   return (
     <DefaultLayout>
       <AuthenticationWrapper pageType={EPageTypes.NON_AUTHENTICATED}>
-        <div className="relative z-10 flex h-screen w-screen flex-col items-center overflow-hidden overflow-y-auto px-8 pt-6 pb-10">
+        <SemecAuthShell showLockup>
           <AuthHeader type={EAuthModes.SIGN_IN} />
           <ResetPasswordForm />
-        </div>
+        </SemecAuthShell>
       </AuthenticationWrapper>
     </DefaultLayout>
   );

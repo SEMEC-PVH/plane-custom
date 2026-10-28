@@ -69,6 +69,13 @@
       "order_priority": "Priority",
       "order_status": "Status",
       "progress": "{completed} of {total} completed"
+    },
+    "auth": {
+      "title": "SEMEC projects",
+      "subtitle": "Planning and tracking of the deliveries of the Municipal Department of Economy.",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "Porto Velho City Hall. Free software under AGPL-3.0:",
+      "source_code": "source code"
     }
   }
 }
