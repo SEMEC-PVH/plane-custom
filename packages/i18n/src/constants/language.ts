@@ -8,6 +8,9 @@ import type { TLanguage, ILanguageOption } from "../types";
 
 export const FALLBACK_LANGUAGE: TLanguage = "en";
 
+// SEMEC: language for whoever has not chosen one yet (sign-in, first access, after signing out)
+export const DEFAULT_LANGUAGE: TLanguage = "pt-BR";
+
 export const SUPPORTED_LANGUAGES: ILanguageOption[] = [
   { label: "English", value: "en" },
   { label: "Français", value: "fr" },

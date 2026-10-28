@@ -20,7 +20,7 @@ from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
 
 # Module imports
-from plane.db.models import Module, Project
+from plane.db.models import Module, Profile, Project
 from plane.semec.models import ProjectActivity, ProjectProperties
 
 logger = logging.getLogger(__name__)
@@ -123,3 +123,11 @@ def record_project(sender, instance, created, **kwargs):
         return
     if previous["project_lead_id"] != instance.project_lead_id:
         _record(instance.id, "updated", "lead", previous["project_lead_id"], instance.project_lead_id)
+
+
+@receiver(post_save, sender=Profile)
+def profile_language_pt_br(sender, instance, created, **kwargs):
+    """New profiles start in Portuguese; a language chosen at creation is kept."""
+    if created and instance.language == "en":
+        Profile.objects.filter(pk=instance.pk).update(language="pt-BR")
+        instance.language = "pt-BR"
