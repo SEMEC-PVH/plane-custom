@@ -9,6 +9,7 @@ import { observer } from "mobx-react";
 import useSWR from "swr";
 import { useSemecProjectPanel } from "@/hooks/store/semec/use-semec-project-panel";
 import { SemecMilestonesSection } from "./milestones-section";
+import { SemecProgressSection } from "./progress-section";
 import { SemecPropertiesSection } from "./properties-section";
 
 type Props = {
@@ -39,6 +40,7 @@ export const SemecProjectPanel = observer(function SemecProjectPanel(props: Prop
     <div className="flex flex-col gap-3 py-4">
       <SemecPropertiesSection workspaceSlug={workspaceSlug} projectId={projectId} onChanged={handleChanged} />
       <SemecMilestonesSection workspaceSlug={workspaceSlug} projectId={projectId} />
+      <SemecProgressSection workspaceSlug={workspaceSlug} projectId={projectId} />
     </div>
   );
 });
