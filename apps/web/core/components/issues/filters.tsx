@@ -19,6 +19,7 @@ import { useIssues } from "@/hooks/store/use-issues";
 import type { TProject } from "@plane/types";
 // local imports
 import { WorkItemsModal } from "../analytics/work-items/modal";
+import { SemecProjectPanelToggle } from "../semec/project-panel/toggle-button";
 import { WorkItemFiltersToggle } from "../work-item-filters/filters-toggle";
 import {
   DisplayFiltersSelection,
@@ -135,6 +136,7 @@ export const HeaderFilters = observer(function HeaderFilters(props: Props) {
       ) : (
         <></>
       )}
+      {storeType === EIssuesStoreType.PROJECT && <SemecProjectPanelToggle />}
     </>
   );
 });
