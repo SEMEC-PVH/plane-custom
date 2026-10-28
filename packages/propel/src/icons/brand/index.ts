@@ -11,3 +11,5 @@ export * from "./zerodha-logo";
 export * from "./plane-lockup";
 export * from "./plane-logo";
 export * from "./plane-wordmark";
+// SEMEC
+export * from "./semec";
