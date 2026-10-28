@@ -1,0 +1,15 @@
+# SEMEC: a imagem minio/minio saiu do Docker Hub. Este override troca a do
+# test-minio pela pgsty/silo, como o upstream fez depois da v1.4.2.
+# Uso: docker compose -f docker-compose-test.yml -f docker-compose-test.semec.yml ...
+services:
+  test-minio:
+    image: docker.io/pgsty/silo:RELEASE.2026-09-16T00-00-00Z
+    entrypoint: >
+      /bin/sh -c "
+      mkdir -p /export/${AWS_S3_BUCKET_NAME:-uploads} &&
+      silo server /export --console-address ':9090' &
+      sleep 3 &&
+      mc alias set local http://localhost:9000 ${AWS_ACCESS_KEY_ID:-access-key} ${AWS_SECRET_ACCESS_KEY:-secret-key} &&
+      mc mb local/${AWS_S3_BUCKET_NAME:-uploads} -p || true &&
+      tail -f /dev/null
+      "
