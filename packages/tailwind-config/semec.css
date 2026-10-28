@@ -135,8 +135,16 @@
   --semec-art-h: min(36vh, 360px);
 }
 
+/* short screens: a lower skyline keeps the form clear of it */
+@media (max-height: 760px) {
+  .semec-auth {
+    --semec-art-h: min(28vh, 360px);
+  }
+}
+
 .semec-auth-content {
-  padding-bottom: calc(var(--semec-art-h) - 24px);
+  /* the form never reaches the skyline: art bottom (44px) − shell padding (40px) + 4px of air */
+  padding-bottom: calc(var(--semec-art-h) + 8px);
 }
 
 .semec-auth-art {
