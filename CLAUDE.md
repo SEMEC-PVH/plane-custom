@@ -15,14 +15,14 @@ Leia também o [AGENTS.md](AGENTS.md) (convenções do upstream: comandos, estil
 
 ## Mapa do repositório
 
-| App           | O que é                                                     | Dockerfile (contexto do build)        | Imagem oficial            |
-| ------------- | ----------------------------------------------------------- | ------------------------------------- | ------------------------- |
-| `apps/web`    | Aplicação principal (React Router + Vite)                   | `apps/web/Dockerfile.web` (`.`)       | `makeplane/plane-frontend` |
-| `apps/api`    | Backend Django/DRF; também roda worker, beat-worker e migrator | `apps/api/Dockerfile.api` (`apps/api`) | `makeplane/plane-backend` |
-| `apps/admin`  | Painel de administração da instância (`/god-mode`)          | `apps/admin/Dockerfile.admin` (`.`)   | `makeplane/plane-admin`   |
-| `apps/space`  | Páginas e projetos publicados (`/spaces`)                   | `apps/space/Dockerfile.space` (`.`)   | `makeplane/plane-space`   |
-| `apps/live`   | Servidor de colaboração em tempo real (Hocuspocus, `/live`) | `apps/live/Dockerfile.live` (`.`)     | `makeplane/plane-live`    |
-| `apps/proxy`  | Proxy reverso Caddy que roteia para os serviços acima       | `apps/proxy/Dockerfile.ce` (`apps/proxy`) | `makeplane/plane-proxy` |
+| App          | O que é                                                        | Dockerfile (contexto do build)            | Imagem oficial             |
+| ------------ | -------------------------------------------------------------- | ----------------------------------------- | -------------------------- |
+| `apps/web`   | Aplicação principal (React Router + Vite)                      | `apps/web/Dockerfile.web` (`.`)           | `makeplane/plane-frontend` |
+| `apps/api`   | Backend Django/DRF; também roda worker, beat-worker e migrator | `apps/api/Dockerfile.api` (`apps/api`)    | `makeplane/plane-backend`  |
+| `apps/admin` | Painel de administração da instância (`/god-mode`)             | `apps/admin/Dockerfile.admin` (`.`)       | `makeplane/plane-admin`    |
+| `apps/space` | Páginas e projetos publicados (`/spaces`)                      | `apps/space/Dockerfile.space` (`.`)       | `makeplane/plane-space`    |
+| `apps/live`  | Servidor de colaboração em tempo real (Hocuspocus, `/live`)    | `apps/live/Dockerfile.live` (`.`)         | `makeplane/plane-live`     |
+| `apps/proxy` | Proxy reverso Caddy que roteia para os serviços acima          | `apps/proxy/Dockerfile.ce` (`apps/proxy`) | `makeplane/plane-proxy`    |
 
 - `Dockerfile.dev` em cada app é só para desenvolvimento local.
 - `packages/` contém as bibliotecas compartilhadas do monorepo (ui, editor, types, constants, services, etc.).
@@ -38,3 +38,12 @@ Leia também o [AGENTS.md](AGENTS.md) (convenções do upstream: comandos, estil
 - Nunca faça commit de segredos nem do arquivo `plane.env`.
 - Os dados podem envolver informação sob sigilo fiscal. Não adicione telemetria, analytics ou chamadas a serviços externos.
 - Licença AGPL-3.0: o código modificado precisa ficar disponível para os usuários da instância. Mantenha o fork acessível a eles e não remova os avisos de licença (`LICENSE.txt`, `COPYRIGHT.txt`, cabeçalhos dos arquivos).
+
+## Customizações feitas
+
+- Painel do projeto no estilo do Linear (desenho em `docs/superpowers/specs/2026-10-28-painel-projeto-design.md`). O backend fica no app Django `plane.semec` (`apps/api/plane/semec`, tabelas `semec_*`, testes em `apps/api/plane/tests/semec`); o frontend fica em `apps/web/core/**/semec/` e no namespace i18n `semec`. Nos arquivos do Plane há só pontos de encaixe, marcados com `SEMEC` ou importando de `semec/`. Imagens a gerar: `plane-backend` (api, worker, beat-worker, migrator) e `plane-frontend`.
+
+## Desenvolvimento local
+
+- Testes da API: `docker compose -f docker-compose-test.yml -f docker-compose-test.semec.yml run --rm api-tests pytest plane/tests/semec`. Stack local: `docker compose -f docker-compose-local.yml -f docker-compose-local.semec.yml up -d`. Os overrides `*.semec.yml` trocam `minio/minio` por `pgsty/silo` e, na stack local, desligam a telemetria.
+- No Windows, o hook de pre-commit barra arquivos do Plane que já tinham avisos de lint antigos. Nesses casos, rode `pnpm exec oxfmt` e `pnpm exec oxlint --deny-warnings` só nos arquivos alterados e faça o commit com `--no-verify`.
