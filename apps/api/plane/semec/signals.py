@@ -8,16 +8,22 @@ Members joining or leaving are not recorded: Plane adds them with bulk_create/bu
 which do not send signals.
 """
 
+# Python imports
+import logging
+
 # Third party imports
 from crum import get_current_user
 
 # Django imports
+from django.db import transaction
 from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
 
 # Module imports
 from plane.db.models import Module, Project
 from plane.semec.models import ProjectActivity, ProjectProperties
+
+logger = logging.getLogger(__name__)
 
 PROPERTY_FIELDS = ("status", "priority", "start_date", "target_date")
 PROPERTY_DEFAULTS = {"status": "backlog", "priority": "none", "start_date": None, "target_date": None}
@@ -35,18 +41,24 @@ def _actor_id():
 
 
 def _record(project_id, verb, field, old_value=None, new_value=None, module_id=None):
-    project = Project.all_objects.filter(pk=project_id).first()
-    if project is None:
-        return
-    ProjectActivity.objects.create(
-        project=project,
-        actor_id=_actor_id(),
-        verb=verb,
-        field=field,
-        old_value=_as_text(old_value),
-        new_value=_as_text(new_value),
-        module_id=module_id,
-    )
+    # The activity log must never break Plane's own saves: failures are logged and swallowed,
+    # inside a savepoint so a database error does not poison the caller's transaction.
+    try:
+        project = Project.all_objects.filter(pk=project_id).first()
+        if project is None:
+            return
+        with transaction.atomic():
+            ProjectActivity.objects.create(
+                project=project,
+                actor_id=_actor_id(),
+                verb=verb,
+                field=field,
+                old_value=_as_text(old_value),
+                new_value=_as_text(new_value),
+                module_id=module_id,
+            )
+    except Exception:
+        logger.exception("semec: could not record project activity (%s %s)", verb, field)
 
 
 def _remember_previous(sender, instance, fields):

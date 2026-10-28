@@ -8,7 +8,7 @@ import pytest
 from django.utils import timezone
 from rest_framework import status
 
-from plane.db.models import Issue, IssueActivity, IssueAssignee, Module, ModuleIssue
+from plane.db.models import Issue, IssueActivity, IssueAssignee, Module, ModuleIssue, Project
 from plane.semec.models import ProjectProperties
 from plane.semec.progress import compute_progress
 
@@ -155,6 +155,28 @@ class TestProjectProgress:
         project.save()
 
         assert guest_client.get(progress_url(project)).status_code == status.HTTP_200_OK
+
+    @pytest.mark.django_db
+    def test_module_from_another_project_is_not_found(self, session_client, project, workspace):
+        other = Project.objects.create(name="Outro", identifier="OUT", workspace=workspace)
+        foreign_module = Module.objects.create(name="Alheio", project=other)
+
+        response = session_client.get(progress_url(project, foreign_module.id))
+
+        assert response.status_code == status.HTTP_404_NOT_FOUND
+
+    @pytest.mark.django_db
+    def test_module_scope_ignores_deleted_link(self, session_client, project, states):
+        module = Module.objects.create(name="M1", project=project)
+        kept = make_issue(project, states["started"], name="Mantido")
+        removed = make_issue(project, states["started"], name="Removido")
+        ModuleIssue.objects.create(module=module, issue=kept, project=project)
+        link = ModuleIssue.objects.create(module=module, issue=removed, project=project)
+        ModuleIssue.all_objects.filter(pk=link.pk).update(deleted_at=timezone.now())
+
+        response = session_client.get(progress_url(project, module.id))
+
+        assert response.data["scope"] == 1
 
     @pytest.mark.django_db
     def test_outsider_forbidden(self, outsider_client, project):

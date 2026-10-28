@@ -3,6 +3,7 @@
 # See the LICENSE file for details.
 
 from datetime import date
+from unittest import mock
 
 import pytest
 from rest_framework import status
@@ -106,3 +107,21 @@ class TestProjectActivity:
     @pytest.mark.django_db
     def test_outsider_forbidden(self, outsider_client, project):
         assert outsider_client.get(activity_url(project)).status_code == status.HTTP_403_FORBIDDEN
+
+    @pytest.mark.django_db
+    def test_restricted_guest_forbidden(self, guest_client, project):
+        project.guest_view_all_features = False
+        project.save()
+
+        assert guest_client.get(activity_url(project)).status_code == status.HTTP_403_FORBIDDEN
+
+    @pytest.mark.django_db
+    def test_activity_failure_does_not_break_plane_saves(self, project):
+        with mock.patch.object(ProjectActivity.objects, "create", side_effect=RuntimeError("boom")):
+            module = Module.objects.create(name="Homologação", project=project)
+            module.name = "Homologação no ar"
+            module.save()
+            project.project_lead = None
+            project.save()
+
+        assert Module.objects.filter(pk=module.pk, name="Homologação no ar").exists()
