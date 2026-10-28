@@ -11,7 +11,16 @@ export type TProjectOrderByOptions =
   | "created_at"
   | "-created_at"
   | "members_length"
-  | "-members_length";
+  | "-members_length"
+  // SEMEC: project properties from the semec app
+  | "semec_target_date"
+  | "-semec_target_date"
+  | "semec_start_date"
+  | "-semec_start_date"
+  | "semec_priority"
+  | "-semec_priority"
+  | "semec_status"
+  | "-semec_status";
 
 export type TProjectDisplayFilters = {
   my_projects?: boolean;
@@ -26,6 +35,9 @@ export type TProjectFilters = {
   lead?: string[] | null;
   members?: string[] | null;
   created_at?: string[] | null;
+  // SEMEC: project properties from the semec app
+  semec_status?: string[] | null;
+  semec_priority?: string[] | null;
 };
 
 export type TProjectStoredFilters = {

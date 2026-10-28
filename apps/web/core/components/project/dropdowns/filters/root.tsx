@@ -18,6 +18,7 @@ import { FilterAccess } from "./access";
 import { FilterCreatedDate } from "./created-at";
 import { FilterLead } from "./lead";
 import { FilterMembers } from "./members";
+import { SemecFilterPriority, SemecFilterStatus } from "@/components/semec/projects/filters";
 
 type Props = {
   displayFilters: TProjectDisplayFilters;
@@ -64,6 +65,22 @@ export const ProjectFiltersSelection = observer(function ProjectFiltersSelection
               })
             }
             title="My projects"
+          />
+        </div>
+
+        {/* SEMEC: status and priority */}
+        <div className="py-2">
+          <SemecFilterStatus
+            appliedFilters={filters.semec_status ?? null}
+            handleUpdate={(val) => handleFiltersUpdate("semec_status", val)}
+            searchQuery={filtersSearchQuery}
+          />
+        </div>
+        <div className="py-2">
+          <SemecFilterPriority
+            appliedFilters={filters.semec_priority ?? null}
+            handleUpdate={(val) => handleFiltersUpdate("semec_priority", val)}
+            searchQuery={filtersSearchQuery}
           />
         </div>
 

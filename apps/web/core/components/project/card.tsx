@@ -30,6 +30,7 @@ import { useAppRouter } from "@/hooks/use-app-router";
 import { usePlatformOS } from "@/hooks/use-platform-os";
 // local imports
 import { CoverImage } from "@/components/common/cover-image";
+import { SemecProjectCardProperties } from "@/components/semec/projects/card-properties";
 import { DeleteProjectModal } from "./delete-project-modal";
 import { JoinProjectModal } from "./join-project-modal";
 import { ArchiveRestoreProjectModal } from "./archive-restore-modal";
@@ -267,10 +268,11 @@ export const ProjectCard = observer(function ProjectCard(props: Props) {
         </div>
 
         <div
-          className={cn("flex h-[104px] w-full flex-col justify-between rounded-b-sm p-4", {
+          className={cn("flex min-h-[104px] w-full flex-col justify-between gap-2 rounded-b-sm p-4", {
             "opacity-90": isArchived,
           })}
         >
+          <SemecProjectCardProperties projectId={project.id} />
           <p className="line-clamp-2 text-13 break-words text-tertiary">
             {project.description && project.description.trim() !== ""
               ? project.description

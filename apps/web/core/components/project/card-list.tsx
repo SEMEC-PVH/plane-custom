@@ -5,6 +5,7 @@
  */
 
 import { observer } from "mobx-react";
+import { useParams } from "next/navigation";
 // plane imports
 import { EUserPermissionsLevel, EUserPermissions } from "@plane/constants";
 import { useTranslation } from "@plane/i18n";
@@ -18,6 +19,7 @@ import { useCommandPalette } from "@/hooks/store/use-command-palette";
 import { useProject } from "@/hooks/store/use-project";
 import { useProjectFilter } from "@/hooks/store/use-project-filter";
 import { useUserPermissions } from "@/hooks/store/user";
+import { useSemecProjectSummaries } from "@/components/semec/projects/card-properties";
 // local imports
 import { ProjectCard } from "./card";
 
@@ -41,6 +43,8 @@ export const ProjectCardList = observer(function ProjectCardList(props: TProject
   } = useProject();
   const { currentWorkspaceDisplayFilters, currentWorkspaceFilters } = useProjectFilter();
   const { allowPermissions } = useUserPermissions();
+  const { workspaceSlug } = useParams();
+  useSemecProjectSummaries(workspaceSlug?.toString());
 
   // derived values
   const workspaceProjectIds = totalProjectIdsProps ?? storeWorkspaceProjectIds;

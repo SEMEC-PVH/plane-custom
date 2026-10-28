@@ -16,6 +16,7 @@ import { AppliedAccessFilters } from "./access";
 import { AppliedDateFilters } from "./date";
 import { AppliedMembersFilters } from "./members";
 import { AppliedProjectDisplayFilters } from "./project-display-filters";
+import { SemecAppliedProjectFilters } from "@/components/semec/projects/filters";
 
 type Props = {
   appliedFilters: TProjectFilters;
@@ -71,6 +72,14 @@ export function ProjectAppliedFiltersList(props: Props) {
               )}
               {DATE_FILTERS.includes(filterKey) && (
                 <AppliedDateFilters
+                  editable={isEditingAllowed}
+                  handleRemove={(val) => handleRemoveFilter(filterKey, val)}
+                  values={value}
+                />
+              )}
+              {(filterKey === "semec_status" || filterKey === "semec_priority") && (
+                <SemecAppliedProjectFilters
+                  filterKey={filterKey}
                   editable={isEditingAllowed}
                   handleRemove={(val) => handleRemoveFilter(filterKey, val)}
                   values={value}

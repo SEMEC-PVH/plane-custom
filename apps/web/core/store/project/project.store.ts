@@ -17,6 +17,7 @@ import { IssueLabelService, IssueService } from "@/services/issue";
 import { ProjectService, ProjectStateService, ProjectArchiveService } from "@/services/project";
 // store
 import type { CoreRootStore } from "../root.store";
+import { applySemecProjectFilters, isSemecOrderBy } from "../semec/project-filters";
 
 type ProjectOverviewCollapsible = "links" | "attachments" | "milestones";
 
@@ -170,7 +171,15 @@ export class ProjectStore implements IProjectStore {
           p.identifier.toLowerCase().includes(searchQuery.toLowerCase())) &&
         shouldFilterProject(p, displayFilters, filters)
     );
-    workspaceProjects = orderProjects(workspaceProjects, displayFilters.order_by);
+    // SEMEC: status/priority filters and date/priority/status ordering
+    workspaceProjects = applySemecProjectFilters(
+      workspaceProjects,
+      this.rootStore.semecProjectPanel.summaryMap,
+      filters,
+      displayFilters.order_by
+    );
+    if (!isSemecOrderBy(displayFilters.order_by))
+      workspaceProjects = orderProjects(workspaceProjects, displayFilters.order_by);
     return workspaceProjects.map((p) => p.id);
   }
 

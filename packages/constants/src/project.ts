@@ -86,6 +86,11 @@ export const PROJECT_ORDER_BY_OPTIONS: {
     key: "members_length",
     i18n_label: "workspace_projects.sort.members_length",
   },
+  // SEMEC: project properties from the semec app
+  { key: "semec_target_date", i18n_label: "semec.projects.order_target_date" },
+  { key: "semec_start_date", i18n_label: "semec.projects.order_start_date" },
+  { key: "semec_priority", i18n_label: "semec.projects.order_priority" },
+  { key: "semec_status", i18n_label: "semec.projects.order_status" },
 ];
 
 export const PROJECT_DISPLAY_FILTER_OPTIONS: {
