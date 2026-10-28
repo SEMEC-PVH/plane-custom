@@ -1,0 +1,32 @@
+# SEMEC: ajustes para a stack de desenvolvimento local.
+# - A imagem minio/minio saiu do Docker Hub: usamos pgsty/silo, como o upstream fez depois da v1.4.2.
+# - Nada de telemetria saindo da máquina: o beat-worker (que agenda o envio de métricas) fica
+#   desligado e o OTLP_ENDPOINT aponta para um endereço local inexistente.
+# Uso: docker compose -f docker-compose-local.yml -f docker-compose-local.semec.yml up -d
+x-no-telemetry: &no-telemetry
+  OTLP_ENDPOINT: http://127.0.0.1:9
+
+services:
+  plane-minio:
+    image: docker.io/pgsty/silo:RELEASE.2026-09-16T00-00-00Z
+    entrypoint: >
+      /bin/sh -c "
+      mkdir -p /export/${AWS_S3_BUCKET_NAME} &&
+      silo server /export --console-address ':9090' &
+      sleep 5 &&
+      mc alias set myminio http://localhost:9000 ${AWS_ACCESS_KEY_ID} ${AWS_SECRET_ACCESS_KEY} &&
+      mc mb myminio/${AWS_S3_BUCKET_NAME} -p || true
+      && tail -f /dev/null
+      "
+
+  api:
+    environment: *no-telemetry
+
+  worker:
+    environment: *no-telemetry
+
+  migrator:
+    environment: *no-telemetry
+
+  beat-worker:
+    profiles: ["telemetria-desligada"]
