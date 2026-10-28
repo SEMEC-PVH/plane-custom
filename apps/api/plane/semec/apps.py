@@ -10,3 +10,6 @@ class SemecConfig(AppConfig):
 
     name = "plane.semec"
     label = "semec"
+
+    def ready(self):
+        from plane.semec import signals  # noqa: F401

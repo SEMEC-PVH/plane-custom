@@ -45,6 +45,33 @@ class ProjectProperties(BaseModel):
         super().save(*args, **kwargs)
 
 
+class ProjectActivity(BaseModel):
+    """Changes made to a project: milestones (modules), properties and lead"""
+
+    project = models.ForeignKey("db.Project", on_delete=models.CASCADE, related_name="semec_activities")
+    workspace = models.ForeignKey("db.Workspace", on_delete=models.CASCADE, related_name="semec_project_activities")
+    actor = models.ForeignKey(
+        "db.User", on_delete=models.SET_NULL, null=True, blank=True, related_name="semec_project_activities"
+    )
+    verb = models.CharField(max_length=20)
+    field = models.CharField(max_length=40)
+    old_value = models.TextField(null=True, blank=True)
+    new_value = models.TextField(null=True, blank=True)
+    module = models.ForeignKey(
+        "db.Module", on_delete=models.SET_NULL, null=True, blank=True, related_name="semec_project_activities"
+    )
+
+    class Meta:
+        verbose_name = "Project Activity"
+        verbose_name_plural = "Project Activities"
+        db_table = "semec_project_activities"
+        ordering = ("-created_at",)
+
+    def save(self, *args, **kwargs):
+        self.workspace_id = self.project.workspace_id
+        super().save(*args, **kwargs)
+
+
 def get_or_default_properties(project):
     """Return the stored properties of the project, or an unsaved instance with the defaults"""
     properties = ProjectProperties.objects.filter(project=project).first()

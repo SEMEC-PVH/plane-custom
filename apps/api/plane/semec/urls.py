@@ -4,9 +4,14 @@
 
 from django.urls import path
 
-from plane.semec.views import ProjectProgressEndpoint, ProjectPropertiesEndpoint
+from plane.semec.views import ProjectActivityEndpoint, ProjectProgressEndpoint, ProjectPropertiesEndpoint
 
 urlpatterns = [
+    path(
+        "workspaces/<str:slug>/projects/<uuid:project_id>/semec/activity/",
+        ProjectActivityEndpoint.as_view(),
+        name="semec-project-activity",
+    ),
     path(
         "workspaces/<str:slug>/projects/<uuid:project_id>/semec/progress/",
         ProjectProgressEndpoint.as_view(),
