@@ -1,0 +1,74 @@
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Project panel",
+      "properties": "Properties",
+      "status": "Status",
+      "priority": "Priority",
+      "lead": "Lead",
+      "members": "Members",
+      "dates": "Dates",
+      "start_date": "Start date",
+      "target_date": "Target date",
+      "no_lead": "No lead",
+      "add_members": "Add members",
+      "save_error": "Could not save the change. Try again.",
+      "dates_error": "The target date cannot be before the start date.",
+      "milestones": "Milestones",
+      "add_milestone": "Add milestone",
+      "no_milestone": "No milestone",
+      "no_milestones": "No milestones yet",
+      "milestone_progress": "{percent}% of {total}",
+      "progress": "Progress",
+      "scope": "Scope",
+      "started": "Started",
+      "completed": "Completed",
+      "assignees": "Assignees",
+      "labels": "Labels",
+      "no_assignee": "No assignee",
+      "no_label": "No label",
+      "no_work_items": "No work items yet",
+      "activity": "Activity",
+      "see_all": "See all",
+      "no_activity": "No activity yet",
+      "activity_item": {
+        "milestone_created": "{actor} added milestone {name}",
+        "milestone_deleted": "{actor} removed milestone {name}",
+        "milestone_renamed": "{actor} renamed milestone {old} to {name}",
+        "milestone_target_date": "{actor} set the target date of milestone {name} to {value}",
+        "status": "{actor} changed the status to {value}",
+        "priority": "{actor} changed the priority to {value}",
+        "start_date": "{actor} set the start date to {value}",
+        "target_date": "{actor} set the target date to {value}",
+        "lead": "{actor} changed the lead to {value}",
+        "someone": "Someone",
+        "a_milestone": "a milestone",
+        "none": "none"
+      }
+    },
+    "project_status": {
+      "backlog": "Backlog",
+      "planned": "Planned",
+      "in_progress": "In progress",
+      "paused": "Paused",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "project_priority": {
+      "urgent": "Urgent",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "none": "No priority"
+    },
+    "projects": {
+      "status": "Status",
+      "priority": "Priority",
+      "order_target_date": "Target date",
+      "order_start_date": "Start date",
+      "order_priority": "Priority",
+      "order_status": "Status",
+      "progress": "{completed} of {total} completed"
+    }
+  }
+}

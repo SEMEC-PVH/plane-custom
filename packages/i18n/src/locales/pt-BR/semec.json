@@ -1,0 +1,74 @@
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Painel do projeto",
+      "properties": "Propriedades",
+      "status": "Status",
+      "priority": "Prioridade",
+      "lead": "Líder",
+      "members": "Membros",
+      "dates": "Datas",
+      "start_date": "Data de início",
+      "target_date": "Data alvo",
+      "no_lead": "Sem líder",
+      "add_members": "Adicionar membros",
+      "save_error": "Não foi possível salvar a alteração. Tente de novo.",
+      "dates_error": "A data alvo não pode ser anterior à data de início.",
+      "milestones": "Milestones",
+      "add_milestone": "Adicionar milestone",
+      "no_milestone": "Sem milestone",
+      "no_milestones": "Nenhum milestone ainda",
+      "milestone_progress": "{percent}% de {total}",
+      "progress": "Progresso",
+      "scope": "Escopo",
+      "started": "Iniciados",
+      "completed": "Concluídos",
+      "assignees": "Responsáveis",
+      "labels": "Etiquetas",
+      "no_assignee": "Sem responsável",
+      "no_label": "Sem etiqueta",
+      "no_work_items": "Nenhum item de trabalho ainda",
+      "activity": "Atividade",
+      "see_all": "Ver tudo",
+      "no_activity": "Nenhuma atividade ainda",
+      "activity_item": {
+        "milestone_created": "{actor} adicionou o milestone {name}",
+        "milestone_deleted": "{actor} removeu o milestone {name}",
+        "milestone_renamed": "{actor} renomeou o milestone {old} para {name}",
+        "milestone_target_date": "{actor} definiu a data alvo do milestone {name} para {value}",
+        "status": "{actor} mudou o status para {value}",
+        "priority": "{actor} mudou a prioridade para {value}",
+        "start_date": "{actor} definiu a data de início para {value}",
+        "target_date": "{actor} definiu a data alvo para {value}",
+        "lead": "{actor} mudou o líder para {value}",
+        "someone": "Alguém",
+        "a_milestone": "um milestone",
+        "none": "nenhum"
+      }
+    },
+    "project_status": {
+      "backlog": "Backlog",
+      "planned": "Planejado",
+      "in_progress": "Em andamento",
+      "paused": "Pausado",
+      "completed": "Concluído",
+      "cancelled": "Cancelado"
+    },
+    "project_priority": {
+      "urgent": "Urgente",
+      "high": "Alta",
+      "medium": "Média",
+      "low": "Baixa",
+      "none": "Sem prioridade"
+    },
+    "projects": {
+      "status": "Status",
+      "priority": "Prioridade",
+      "order_target_date": "Data alvo",
+      "order_start_date": "Data de início",
+      "order_priority": "Prioridade",
+      "order_status": "Status",
+      "progress": "{completed} de {total} concluídos"
+    }
+  }
+}
