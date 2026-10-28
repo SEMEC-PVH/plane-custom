@@ -5,6 +5,7 @@
  */
 
 import { useState } from "react";
+import { sortBy } from "lodash-es";
 import { observer } from "mobx-react";
 import useSWR from "swr";
 import { EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
@@ -22,13 +23,11 @@ import { SemecPanelSection } from "./section";
 
 // Milestones with a target date first (soonest first), then the rest by name
 export const sortMilestones = (modules: IModule[]) =>
-  modules.toSorted((a, b) => {
-    if (a.target_date && b.target_date && a.target_date !== b.target_date)
-      return a.target_date < b.target_date ? -1 : 1;
-    if (a.target_date && !b.target_date) return -1;
-    if (!a.target_date && b.target_date) return 1;
-    return a.name.localeCompare(b.name);
-  });
+  sortBy(modules, [
+    (module) => !module.target_date,
+    (module) => module.target_date ?? "",
+    (module) => module.name.toLowerCase(),
+  ]);
 
 type Props = {
   workspaceSlug: string;
