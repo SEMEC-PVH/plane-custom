@@ -69,6 +69,13 @@
       "order_priority": "Priorytet",
       "order_status": "Status",
       "progress": "Ukończono {completed} z {total}"
+    },
+    "auth": {
+      "title": "Projekty SEMEC",
+      "subtitle": "Planowanie i śledzenie rezultatów Miejskiego Sekretariatu Gospodarki.",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "Urząd Miasta Porto Velho. Wolne oprogramowanie na licencji AGPL-3.0:",
+      "source_code": "kod źródłowy"
     }
   }
 }

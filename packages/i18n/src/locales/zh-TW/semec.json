@@ -69,6 +69,13 @@
       "order_priority": "優先順序",
       "order_status": "狀態",
       "progress": "{total} 項中已完成 {completed} 項"
+    },
+    "auth": {
+      "title": "SEMEC 專案",
+      "subtitle": "市經濟局交付成果的規劃與追蹤。",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "波多韋柳市政府。採用 AGPL-3.0 的自由軟體：",
+      "source_code": "原始碼"
     }
   }
 }

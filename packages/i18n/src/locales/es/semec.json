@@ -69,6 +69,13 @@
       "order_priority": "Prioridad",
       "order_status": "Estado",
       "progress": "{completed} de {total} completados"
+    },
+    "auth": {
+      "title": "Proyectos de la SEMEC",
+      "subtitle": "Planificación y seguimiento de las entregas de la Secretaría Municipal de Economía.",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "Alcaldía de Porto Velho. Software libre bajo AGPL-3.0:",
+      "source_code": "código fuente"
     }
   }
 }

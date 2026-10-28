@@ -69,6 +69,13 @@
       "order_priority": "Prioritate",
       "order_status": "Stare",
       "progress": "{completed} din {total} finalizate"
+    },
+    "auth": {
+      "title": "Proiectele SEMEC",
+      "subtitle": "Planificarea și urmărirea livrabilelor Secretariatului Municipal de Economie.",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "Primăria Porto Velho. Software liber sub licența AGPL-3.0:",
+      "source_code": "cod sursă"
     }
   }
 }

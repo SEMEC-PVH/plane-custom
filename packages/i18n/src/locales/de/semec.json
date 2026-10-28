@@ -69,6 +69,13 @@
       "order_priority": "Priorität",
       "order_status": "Status",
       "progress": "{completed} von {total} abgeschlossen"
+    },
+    "auth": {
+      "title": "SEMEC-Projekte",
+      "subtitle": "Planung und Verfolgung der Ergebnisse des Städtischen Wirtschaftssekretariats.",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "Stadtverwaltung Porto Velho. Freie Software unter AGPL-3.0:",
+      "source_code": "Quellcode"
     }
   }
 }

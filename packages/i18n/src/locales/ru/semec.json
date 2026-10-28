@@ -69,6 +69,13 @@
       "order_priority": "Приоритет",
       "order_status": "Статус",
       "progress": "Завершено {completed} из {total}"
+    },
+    "auth": {
+      "title": "Проекты SEMEC",
+      "subtitle": "Планирование и отслеживание результатов Муниципального секретариата экономики.",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "Мэрия Порту-Велью. Свободное ПО под лицензией AGPL-3.0:",
+      "source_code": "исходный код"
     }
   }
 }

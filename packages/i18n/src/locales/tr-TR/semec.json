@@ -69,6 +69,13 @@
       "order_priority": "Öncelik",
       "order_status": "Durum",
       "progress": "{total} öğeden {completed} tanesi tamamlandı"
+    },
+    "auth": {
+      "title": "SEMEC projeleri",
+      "subtitle": "Belediye Ekonomi Sekreterliği çıktılarının planlanması ve takibi.",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "Porto Velho Belediyesi. AGPL-3.0 lisanslı özgür yazılım:",
+      "source_code": "kaynak kodu"
     }
   }
 }

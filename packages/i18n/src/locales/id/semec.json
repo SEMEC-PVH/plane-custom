@@ -69,6 +69,13 @@
       "order_priority": "Prioritas",
       "order_status": "Status",
       "progress": "{completed} dari {total} selesai"
+    },
+    "auth": {
+      "title": "Proyek SEMEC",
+      "subtitle": "Perencanaan dan pemantauan hasil kerja Sekretariat Ekonomi Kota.",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "Pemerintah Kota Porto Velho. Perangkat lunak bebas di bawah AGPL-3.0:",
+      "source_code": "kode sumber"
     }
   }
 }

@@ -69,6 +69,13 @@
       "order_priority": "우선순위",
       "order_status": "상태",
       "progress": "{total}개 중 {completed}개 완료"
+    },
+    "auth": {
+      "title": "SEMEC 프로젝트",
+      "subtitle": "시 경제국 산출물의 계획 및 추적.",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "포르투벨류 시청. AGPL-3.0 자유 소프트웨어:",
+      "source_code": "소스 코드"
     }
   }
 }

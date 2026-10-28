@@ -69,6 +69,13 @@
       "order_priority": "優先度",
       "order_status": "ステータス",
       "progress": "{total}件中{completed}件完了"
+    },
+    "auth": {
+      "title": "SEMEC のプロジェクト",
+      "subtitle": "市経済局の成果物の計画と進捗管理。",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "ポルト・ヴェーリョ市役所。AGPL-3.0 のフリーソフトウェア：",
+      "source_code": "ソースコード"
     }
   }
 }

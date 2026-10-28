@@ -42,6 +42,7 @@ Leia também o [AGENTS.md](AGENTS.md) (convenções do upstream: comandos, estil
 ## Customizações feitas
 
 - Painel do projeto no estilo do Linear (desenho em `docs/superpowers/specs/2026-10-28-painel-projeto-design.md`). O backend fica no app Django `plane.semec` (`apps/api/plane/semec`, tabelas `semec_*`, testes em `apps/api/plane/tests/semec`); o frontend fica em `apps/web/core/**/semec/` e no namespace i18n `semec`. Nos arquivos do Plane há só pontos de encaixe, marcados com `SEMEC` ou importando de `semec/`. Imagens a gerar: `plane-backend` (api, worker, beat-worker, migrator) e `plane-frontend`.
+- Identidade visual da SEMEC (desenho em `docs/superpowers/specs/2026-10-28-identidade-semec-design.md`): tokens do SDS e tema escuro preto em `packages/tailwind-config/semec.css`, Poppins em `packages/tailwind-config/fonts/` (declarada em `apps/web/styles/semec-fonts.css`), logo em `packages/propel/src/icons/brand/semec/` (servindo `PlaneLockup`/`PlaneLogo`), header e login em `apps/web/core/components/semec/brand/`, pt-BR como idioma padrão (signal e migration `semec.0003`). Admin e space continuam com o visual do Plane.
 
 ## Desenvolvimento local
 

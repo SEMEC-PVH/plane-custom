@@ -69,6 +69,13 @@
       "order_priority": "Priorita",
       "order_status": "Stav",
       "progress": "Dokončeno {completed} z {total}"
+    },
+    "auth": {
+      "title": "Projekty SEMEC",
+      "subtitle": "Plánování a sledování výstupů Městského sekretariátu hospodářství.",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "Radnice Porto Velho. Svobodný software pod licencí AGPL-3.0:",
+      "source_code": "zdrojový kód"
     }
   }
 }

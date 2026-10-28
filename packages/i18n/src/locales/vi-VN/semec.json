@@ -69,6 +69,13 @@
       "order_priority": "Ưu tiên",
       "order_status": "Trạng thái",
       "progress": "Đã hoàn thành {completed} trên {total}"
+    },
+    "auth": {
+      "title": "Dự án SEMEC",
+      "subtitle": "Lập kế hoạch và theo dõi các kết quả của Sở Kinh tế thành phố.",
+      "email_placeholder": "nome@portovelho.ro.gov.br",
+      "footer": "Tòa thị chính Porto Velho. Phần mềm tự do theo giấy phép AGPL-3.0:",
+      "source_code": "mã nguồn"
     }
   }
 }
