@@ -20,6 +20,8 @@ import useSWR from "swr";
 import { useWorkspaceNotifications } from "@/hooks/store/notifications";
 // local imports
 import { StarUsOnGitHubLink } from "@/app/(all)/[workspaceSlug]/(projects)/star-us-link";
+// SEMEC
+import { SemecHeaderLogo } from "@/components/semec/brand";
 
 export const TopNavigationRoot = observer(function TopNavigationRoot() {
   // router
@@ -51,7 +53,9 @@ export const TopNavigationRoot = observer(function TopNavigationRoot() {
       })}
     >
       {/* Workspace Menu */}
-      <div className="flex-1 shrink-0">
+      <div className="flex flex-1 shrink-0 items-center">
+        {/* SEMEC */}
+        <SemecHeaderLogo />
         <WorkspaceMenuRoot variant="top-navigation" />
       </div>
       {/* Power K Search */}
