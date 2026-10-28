@@ -1,0 +1,131 @@
+/**
+ * SEMEC: identidade do Design System SEMEC (SDS) sobre o tema do Plane.
+ * Fica fora de @layer para vencer as variáveis do Plane. Os temas de alto contraste
+ * e o tema personalizado não recebem estes tokens.
+ * A Poppins (fonts/, SIL Open Font License 1.1) é declarada em apps/web/styles/semec-fonts.css.
+ */
+
+/* ---------- Tema claro: tokens do SDS ---------- */
+:root:not([data-theme*="contrast"]):not([data-theme*="dark"]):not([data-theme="custom"]) {
+  /* neutros (cinzas azulados do SDS) */
+  --neutral-white: #ffffff;
+  --neutral-100: #f9fafc;
+  --neutral-200: #f4f6f9;
+  --neutral-300: #eef1f5;
+  --neutral-400: #e5e7eb;
+  --neutral-500: #dde1e7;
+  --neutral-600: #d1d5db;
+  --neutral-700: #b8bfca;
+  --neutral-800: #8a94a6;
+  --neutral-900: #6b778d;
+  --neutral-1000: #4b5563;
+  --neutral-1100: #374151;
+  --neutral-1200: #14233a;
+  --neutral-black: #0e1a2c;
+
+  /* marca: azul de ação do SDS */
+  --brand-100: #eef4fa;
+  --brand-200: #e0ebf6;
+  --brand-300: #c9dbee;
+  --brand-400: #a8c3e2;
+  --brand-500: #7fa5d2;
+  --brand-600: #5a88bf;
+  --brand-700: #3a6ca6;
+  --brand-800: #34639a;
+  --brand-900: #2f5a8a;
+  --brand-1000: #26476f;
+  --brand-1100: #26325b;
+  --brand-1200: #223f99;
+  --brand-default: #3a6ca6;
+
+  /* feedback do SDS */
+  --txt-success-primary: #3a6420;
+  --bg-success-subtle: #eef7e6;
+  --txt-warning-primary: #8a5a00;
+  --bg-warning-subtle: #fdf6e3;
+  --txt-danger-primary: #b91c1c;
+  --bg-danger-primary: #b91c1c;
+  --bg-danger-subtle: #fef2f2;
+}
+
+/* ---------- Tema escuro: preto, com a identidade nos acentos ---------- */
+[data-theme="dark"] {
+  --neutral-black: #000000;
+  --neutral-100: #0a0a0b;
+  --neutral-200: #111112;
+  --neutral-300: #18181a;
+  --neutral-400: #1f2022;
+  --neutral-500: #2a2b2e;
+  --neutral-600: #35373a;
+  --neutral-700: #44464a;
+  --neutral-800: #6c6f75;
+  --neutral-900: #8e9197;
+  --neutral-1000: #b0b3b8;
+  --neutral-1100: #d0d2d6;
+  --neutral-1200: #ececee;
+  --neutral-white: #f7f7f8;
+
+  --brand-100: #0f1a2b;
+  --brand-200: #16243a;
+  --brand-300: #26446c;
+  --brand-400: #2f5486;
+  --brand-500: #3a6ca6;
+  --brand-600: #5a88bf;
+  --brand-700: #7aa2d8;
+  --brand-800: #a8c3e2;
+  --brand-900: #c9dbee;
+  --brand-1000: #e0ebf6;
+  --brand-1100: #eef4fa;
+  --brand-1200: #f6f9fd;
+  --brand-default: #6b97cf;
+
+  /* botões com o azul de ação; texto e links de acento com o azul claro */
+  --bg-accent-primary: #3a6ca6;
+  --bg-accent-primary-hover: #4f7fbf;
+  --bg-accent-primary-active: #2f5a8a;
+  --txt-accent-primary: #8fb2e3;
+  --txt-link-primary: #8fb2e3;
+}
+
+/* ---------- Fonte e raios do SDS ---------- */
+:root:not([data-theme*="contrast"]):not([data-theme="custom"]) {
+  --font-body: "Poppins", system-ui, -apple-system, sans-serif;
+  --font-heading: "Poppins", system-ui, -apple-system, sans-serif;
+  --radius-sm: 2px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+/* ---------- Marca ---------- */
+:root {
+  /* texto do logo no azul oficial, nos dois temas */
+  --semec-logo-text: #1e459b;
+  /* horizonte de Porto Velho na tela de login */
+  --semec-art-line: #a9c1de;
+  --semec-art-tint: #eef3f9;
+}
+
+[data-theme*="dark"] {
+  --semec-art-line: #2c4670;
+  --semec-art-tint: #0d1420;
+}
+
+@keyframes semec-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.semec-pulse {
+  animation: semec-pulse 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .semec-pulse {
+    animation: none;
+  }
+}
