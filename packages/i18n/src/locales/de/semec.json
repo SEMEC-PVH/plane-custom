@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Projekt-Seitenleiste",
+      "properties": "Eigenschaften",
+      "status": "Status",
+      "priority": "Priorität",
+      "lead": "Leitung",
+      "members": "Mitglieder",
+      "dates": "Zeitraum",
+      "start_date": "Startdatum",
+      "target_date": "Zieldatum",
+      "no_lead": "Keine Leitung",
+      "add_members": "Mitglieder hinzufügen",
+      "save_error": "Die Änderung konnte nicht gespeichert werden. Versuchen Sie es erneut.",
+      "dates_error": "Das Zieldatum darf nicht vor dem Startdatum liegen.",
+      "milestones": "Meilensteine",
+      "add_milestone": "Meilenstein hinzufügen",
+      "no_milestone": "Kein Meilenstein",
+      "no_milestones": "Noch keine Meilensteine",
+      "milestone_progress": "{percent} % von {total}",
+      "progress": "Fortschritt",
+      "scope": "Umfang",
+      "started": "Gestartet",
+      "completed": "Abgeschlossen",
+      "assignees": "Zugewiesene",
+      "labels": "Labels",
+      "no_assignee": "Keine Zuweisung",
+      "no_label": "Kein Label",
+      "no_work_items": "Noch keine Arbeitselemente",
+      "activity": "Aktivität",
+      "see_all": "Alle anzeigen",
+      "no_activity": "Noch keine Aktivität",
+      "activity_item": {
+        "milestone_created": "{actor} hat den Meilenstein {name} hinzugefügt",
+        "milestone_deleted": "{actor} hat den Meilenstein {name} entfernt",
+        "milestone_renamed": "{actor} hat den Meilenstein {old} in {name} umbenannt",
+        "milestone_target_date": "{actor} hat das Zieldatum des Meilensteins {name} auf {value} gesetzt",
+        "status": "{actor} hat den Status auf {value} geändert",
+        "priority": "{actor} hat die Priorität auf {value} geändert",
+        "start_date": "{actor} hat das Startdatum auf {value} gesetzt",
+        "target_date": "{actor} hat das Zieldatum auf {value} gesetzt",
+        "lead": "{actor} hat die Leitung auf {value} geändert",
+        "someone": "Jemand",
+        "a_milestone": "ein Meilenstein",
+        "none": "keine"
+      }
+    },
+    "project_status": {
+      "backlog": "Backlog",
+      "planned": "Geplant",
+      "in_progress": "In Bearbeitung",
+      "paused": "Pausiert",
+      "completed": "Abgeschlossen",
+      "cancelled": "Abgebrochen"
+    },
+    "project_priority": {
+      "urgent": "Dringend",
+      "high": "Hoch",
+      "medium": "Mittel",
+      "low": "Niedrig",
+      "none": "Keine Priorität"
+    },
+    "projects": {
+      "status": "Status",
+      "priority": "Priorität",
+      "order_target_date": "Zieldatum",
+      "order_start_date": "Startdatum",
+      "order_priority": "Priorität",
+      "order_status": "Status",
+      "progress": "{completed} von {total} abgeschlossen"
+    }
+  }
+}

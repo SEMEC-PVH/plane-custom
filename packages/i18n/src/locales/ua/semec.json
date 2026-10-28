@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Панель проєкту",
+      "properties": "Властивості",
+      "status": "Статус",
+      "priority": "Пріоритет",
+      "lead": "Керівник",
+      "members": "Учасники",
+      "dates": "Дати",
+      "start_date": "Дата початку",
+      "target_date": "Цільова дата",
+      "no_lead": "Без керівника",
+      "add_members": "Додати учасників",
+      "save_error": "Не вдалося зберегти зміну. Спробуйте ще раз.",
+      "dates_error": "Цільова дата не може бути раніше за дату початку.",
+      "milestones": "Віхи",
+      "add_milestone": "Додати віху",
+      "no_milestone": "Без віхи",
+      "no_milestones": "Ще немає віх",
+      "milestone_progress": "{percent} % з {total}",
+      "progress": "Прогрес",
+      "scope": "Обсяг",
+      "started": "Розпочаті",
+      "completed": "Завершені",
+      "assignees": "Призначені",
+      "labels": "Мітки",
+      "no_assignee": "Без призначення",
+      "no_label": "Без мітки",
+      "no_work_items": "Ще немає робочих елементів",
+      "activity": "Активність",
+      "see_all": "Показати все",
+      "no_activity": "Ще немає активності",
+      "activity_item": {
+        "milestone_created": "{actor} додав(-ла) віху {name}",
+        "milestone_deleted": "{actor} видалив(-ла) віху {name}",
+        "milestone_renamed": "{actor} перейменував(-ла) віху {old} на {name}",
+        "milestone_target_date": "{actor} встановив(-ла) цільову дату віхи {name} на {value}",
+        "status": "{actor} змінив(-ла) статус на {value}",
+        "priority": "{actor} змінив(-ла) пріоритет на {value}",
+        "start_date": "{actor} встановив(-ла) дату початку на {value}",
+        "target_date": "{actor} встановив(-ла) цільову дату на {value}",
+        "lead": "{actor} змінив(-ла) керівника на {value}",
+        "someone": "Хтось",
+        "a_milestone": "віха",
+        "none": "немає"
+      }
+    },
+    "project_status": {
+      "backlog": "Беклог",
+      "planned": "Заплановано",
+      "in_progress": "У процесі",
+      "paused": "Призупинено",
+      "completed": "Завершено",
+      "cancelled": "Скасовано"
+    },
+    "project_priority": {
+      "urgent": "Терміновий",
+      "high": "Високий",
+      "medium": "Середній",
+      "low": "Низький",
+      "none": "Без пріоритету"
+    },
+    "projects": {
+      "status": "Статус",
+      "priority": "Пріоритет",
+      "order_target_date": "Цільова дата",
+      "order_start_date": "Дата початку",
+      "order_priority": "Пріоритет",
+      "order_status": "Статус",
+      "progress": "Завершено {completed} з {total}"
+    }
+  }
+}

@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Pannello del progetto",
+      "properties": "Proprietà",
+      "status": "Stato",
+      "priority": "Priorità",
+      "lead": "Responsabile",
+      "members": "Membri",
+      "dates": "Date",
+      "start_date": "Data di inizio",
+      "target_date": "Data prevista",
+      "no_lead": "Nessun responsabile",
+      "add_members": "Aggiungi membri",
+      "save_error": "Impossibile salvare la modifica. Riprovi.",
+      "dates_error": "La data prevista non può essere precedente alla data di inizio.",
+      "milestones": "Traguardi",
+      "add_milestone": "Aggiungi traguardo",
+      "no_milestone": "Nessun traguardo",
+      "no_milestones": "Nessun traguardo ancora",
+      "milestone_progress": "{percent}% di {total}",
+      "progress": "Progresso",
+      "scope": "Ambito",
+      "started": "Iniziati",
+      "completed": "Completati",
+      "assignees": "Assegnatari",
+      "labels": "Etichette",
+      "no_assignee": "Nessun assegnatario",
+      "no_label": "Nessuna etichetta",
+      "no_work_items": "Nessun elemento di lavoro ancora",
+      "activity": "Attività",
+      "see_all": "Mostra tutto",
+      "no_activity": "Nessuna attività ancora",
+      "activity_item": {
+        "milestone_created": "{actor} ha aggiunto il traguardo {name}",
+        "milestone_deleted": "{actor} ha rimosso il traguardo {name}",
+        "milestone_renamed": "{actor} ha rinominato il traguardo {old} in {name}",
+        "milestone_target_date": "{actor} ha impostato la data prevista del traguardo {name} su {value}",
+        "status": "{actor} ha cambiato lo stato in {value}",
+        "priority": "{actor} ha cambiato la priorità in {value}",
+        "start_date": "{actor} ha impostato la data di inizio su {value}",
+        "target_date": "{actor} ha impostato la data prevista su {value}",
+        "lead": "{actor} ha cambiato il responsabile in {value}",
+        "someone": "Qualcuno",
+        "a_milestone": "un traguardo",
+        "none": "nessuno"
+      }
+    },
+    "project_status": {
+      "backlog": "Backlog",
+      "planned": "Pianificato",
+      "in_progress": "In corso",
+      "paused": "In pausa",
+      "completed": "Completato",
+      "cancelled": "Annullato"
+    },
+    "project_priority": {
+      "urgent": "Urgente",
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Bassa",
+      "none": "Nessuna priorità"
+    },
+    "projects": {
+      "status": "Stato",
+      "priority": "Priorità",
+      "order_target_date": "Data prevista",
+      "order_start_date": "Data di inizio",
+      "order_priority": "Priorità",
+      "order_status": "Stato",
+      "progress": "{completed} di {total} completati"
+    }
+  }
+}

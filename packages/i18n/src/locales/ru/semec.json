@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Панель проекта",
+      "properties": "Свойства",
+      "status": "Статус",
+      "priority": "Приоритет",
+      "lead": "Руководитель",
+      "members": "Участники",
+      "dates": "Даты",
+      "start_date": "Дата начала",
+      "target_date": "Целевая дата",
+      "no_lead": "Нет руководителя",
+      "add_members": "Добавить участников",
+      "save_error": "Не удалось сохранить изменение. Попробуйте еще раз.",
+      "dates_error": "Целевая дата не может быть раньше даты начала.",
+      "milestones": "Вехи",
+      "add_milestone": "Добавить веху",
+      "no_milestone": "Без вехи",
+      "no_milestones": "Пока нет вех",
+      "milestone_progress": "{percent} % из {total}",
+      "progress": "Прогресс",
+      "scope": "Объем",
+      "started": "Начатые",
+      "completed": "Завершенные",
+      "assignees": "Назначенные",
+      "labels": "Метки",
+      "no_assignee": "Нет назначенного",
+      "no_label": "Без метки",
+      "no_work_items": "Пока нет рабочих элементов",
+      "activity": "Активность",
+      "see_all": "Показать все",
+      "no_activity": "Пока нет активности",
+      "activity_item": {
+        "milestone_created": "{actor} добавил(а) веху {name}",
+        "milestone_deleted": "{actor} удалил(а) веху {name}",
+        "milestone_renamed": "{actor} переименовал(а) веху {old} в {name}",
+        "milestone_target_date": "{actor} установил(а) целевую дату вехи {name} на {value}",
+        "status": "{actor} изменил(а) статус на {value}",
+        "priority": "{actor} изменил(а) приоритет на {value}",
+        "start_date": "{actor} установил(а) дату начала на {value}",
+        "target_date": "{actor} установил(а) целевую дату на {value}",
+        "lead": "{actor} изменил(а) руководителя на {value}",
+        "someone": "Кто-то",
+        "a_milestone": "веха",
+        "none": "нет"
+      }
+    },
+    "project_status": {
+      "backlog": "Бэклог",
+      "planned": "Запланировано",
+      "in_progress": "В процессе",
+      "paused": "Приостановлено",
+      "completed": "Завершено",
+      "cancelled": "Отменено"
+    },
+    "project_priority": {
+      "urgent": "Срочный",
+      "high": "Высокий",
+      "medium": "Средний",
+      "low": "Низкий",
+      "none": "Без приоритета"
+    },
+    "projects": {
+      "status": "Статус",
+      "priority": "Приоритет",
+      "order_target_date": "Целевая дата",
+      "order_start_date": "Дата начала",
+      "order_priority": "Приоритет",
+      "order_status": "Статус",
+      "progress": "Завершено {completed} из {total}"
+    }
+  }
+}

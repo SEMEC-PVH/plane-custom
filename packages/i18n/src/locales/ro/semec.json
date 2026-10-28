@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Panoul proiectului",
+      "properties": "Proprietăți",
+      "status": "Stare",
+      "priority": "Prioritate",
+      "lead": "Lider",
+      "members": "Membri",
+      "dates": "Date",
+      "start_date": "Data de început",
+      "target_date": "Data țintă",
+      "no_lead": "Fără lider",
+      "add_members": "Adaugă membri",
+      "save_error": "Modificarea nu a putut fi salvată. Încercați din nou.",
+      "dates_error": "Data țintă nu poate fi anterioară datei de început.",
+      "milestones": "Jaloane",
+      "add_milestone": "Adaugă jalon",
+      "no_milestone": "Fără jalon",
+      "no_milestones": "Niciun jalon încă",
+      "milestone_progress": "{percent}% din {total}",
+      "progress": "Progres",
+      "scope": "Domeniu",
+      "started": "Începute",
+      "completed": "Finalizate",
+      "assignees": "Responsabili",
+      "labels": "Etichete",
+      "no_assignee": "Fără responsabil",
+      "no_label": "Fără etichetă",
+      "no_work_items": "Niciun element de lucru încă",
+      "activity": "Activitate",
+      "see_all": "Arată tot",
+      "no_activity": "Nicio activitate încă",
+      "activity_item": {
+        "milestone_created": "{actor} a adăugat jalonul {name}",
+        "milestone_deleted": "{actor} a eliminat jalonul {name}",
+        "milestone_renamed": "{actor} a redenumit jalonul {old} în {name}",
+        "milestone_target_date": "{actor} a setat data țintă a jalonului {name} la {value}",
+        "status": "{actor} a schimbat starea în {value}",
+        "priority": "{actor} a schimbat prioritatea în {value}",
+        "start_date": "{actor} a setat data de început la {value}",
+        "target_date": "{actor} a setat data țintă la {value}",
+        "lead": "{actor} a schimbat liderul în {value}",
+        "someone": "Cineva",
+        "a_milestone": "un jalon",
+        "none": "niciunul"
+      }
+    },
+    "project_status": {
+      "backlog": "Restante",
+      "planned": "Planificat",
+      "in_progress": "În desfășurare",
+      "paused": "În pauză",
+      "completed": "Finalizat",
+      "cancelled": "Anulat"
+    },
+    "project_priority": {
+      "urgent": "Urgentă",
+      "high": "Ridicată",
+      "medium": "Medie",
+      "low": "Scăzută",
+      "none": "Fără prioritate"
+    },
+    "projects": {
+      "status": "Stare",
+      "priority": "Prioritate",
+      "order_target_date": "Data țintă",
+      "order_start_date": "Data de început",
+      "order_priority": "Prioritate",
+      "order_status": "Stare",
+      "progress": "{completed} din {total} finalizate"
+    }
+  }
+}

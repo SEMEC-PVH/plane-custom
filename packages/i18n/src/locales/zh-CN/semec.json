@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "项目面板",
+      "properties": "属性",
+      "status": "状态",
+      "priority": "优先级",
+      "lead": "项目负责人",
+      "members": "成员",
+      "dates": "日期",
+      "start_date": "开始日期",
+      "target_date": "目标日期",
+      "no_lead": "无项目负责人",
+      "add_members": "添加成员",
+      "save_error": "无法保存更改。请重试。",
+      "dates_error": "目标日期不能早于开始日期。",
+      "milestones": "里程碑",
+      "add_milestone": "添加里程碑",
+      "no_milestone": "无里程碑",
+      "no_milestones": "暂无里程碑",
+      "milestone_progress": "{percent}%（共 {total} 项）",
+      "progress": "进度",
+      "scope": "范围",
+      "started": "已开始",
+      "completed": "已完成",
+      "assignees": "负责人",
+      "labels": "标签",
+      "no_assignee": "无负责人",
+      "no_label": "无标签",
+      "no_work_items": "暂无工作项",
+      "activity": "活动",
+      "see_all": "查看全部",
+      "no_activity": "暂无活动",
+      "activity_item": {
+        "milestone_created": "{actor} 添加了里程碑 {name}",
+        "milestone_deleted": "{actor} 删除了里程碑 {name}",
+        "milestone_renamed": "{actor} 将里程碑 {old} 重命名为 {name}",
+        "milestone_target_date": "{actor} 将里程碑 {name} 的目标日期设置为 {value}",
+        "status": "{actor} 将状态更改为 {value}",
+        "priority": "{actor} 将优先级更改为 {value}",
+        "start_date": "{actor} 将开始日期设置为 {value}",
+        "target_date": "{actor} 将目标日期设置为 {value}",
+        "lead": "{actor} 将项目负责人更改为 {value}",
+        "someone": "某人",
+        "a_milestone": "某个里程碑",
+        "none": "无"
+      }
+    },
+    "project_status": {
+      "backlog": "待办",
+      "planned": "已计划",
+      "in_progress": "进行中",
+      "paused": "已暂停",
+      "completed": "已完成",
+      "cancelled": "已取消"
+    },
+    "project_priority": {
+      "urgent": "紧急",
+      "high": "高",
+      "medium": "中",
+      "low": "低",
+      "none": "无优先级"
+    },
+    "projects": {
+      "status": "状态",
+      "priority": "优先级",
+      "order_target_date": "目标日期",
+      "order_start_date": "开始日期",
+      "order_priority": "优先级",
+      "order_status": "状态",
+      "progress": "{total} 项中已完成 {completed} 项"
+    }
+  }
+}

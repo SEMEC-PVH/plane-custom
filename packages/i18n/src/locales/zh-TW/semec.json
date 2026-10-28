@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "專案面板",
+      "properties": "屬性",
+      "status": "狀態",
+      "priority": "優先順序",
+      "lead": "負責人",
+      "members": "成員",
+      "dates": "日期",
+      "start_date": "開始日期",
+      "target_date": "目標日期",
+      "no_lead": "無負責人",
+      "add_members": "新增成員",
+      "save_error": "無法儲存變更。請再試一次。",
+      "dates_error": "目標日期不能早於開始日期。",
+      "milestones": "里程碑",
+      "add_milestone": "新增里程碑",
+      "no_milestone": "無里程碑",
+      "no_milestones": "尚無里程碑",
+      "milestone_progress": "{percent}%（共 {total} 項）",
+      "progress": "進度",
+      "scope": "範圍",
+      "started": "已開始",
+      "completed": "已完成",
+      "assignees": "指派對象",
+      "labels": "標籤",
+      "no_assignee": "無指派對象",
+      "no_label": "無標籤",
+      "no_work_items": "尚無工作事項",
+      "activity": "活動",
+      "see_all": "顯示全部",
+      "no_activity": "尚無活動",
+      "activity_item": {
+        "milestone_created": "{actor} 新增了里程碑 {name}",
+        "milestone_deleted": "{actor} 移除了里程碑 {name}",
+        "milestone_renamed": "{actor} 將里程碑 {old} 重新命名為 {name}",
+        "milestone_target_date": "{actor} 將里程碑 {name} 的目標日期設定為 {value}",
+        "status": "{actor} 將狀態變更為 {value}",
+        "priority": "{actor} 將優先順序變更為 {value}",
+        "start_date": "{actor} 將開始日期設定為 {value}",
+        "target_date": "{actor} 將目標日期設定為 {value}",
+        "lead": "{actor} 將負責人變更為 {value}",
+        "someone": "某人",
+        "a_milestone": "某個里程碑",
+        "none": "無"
+      }
+    },
+    "project_status": {
+      "backlog": "待辦事項",
+      "planned": "已規劃",
+      "in_progress": "進行中",
+      "paused": "已暫停",
+      "completed": "已完成",
+      "cancelled": "已取消"
+    },
+    "project_priority": {
+      "urgent": "緊急",
+      "high": "高",
+      "medium": "中",
+      "low": "低",
+      "none": "無優先順序"
+    },
+    "projects": {
+      "status": "狀態",
+      "priority": "優先順序",
+      "order_target_date": "目標日期",
+      "order_start_date": "開始日期",
+      "order_priority": "優先順序",
+      "order_status": "狀態",
+      "progress": "{total} 項中已完成 {completed} 項"
+    }
+  }
+}

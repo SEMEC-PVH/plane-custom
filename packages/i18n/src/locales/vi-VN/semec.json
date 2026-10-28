@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Bảng thông tin dự án",
+      "properties": "Thuộc tính",
+      "status": "Trạng thái",
+      "priority": "Ưu tiên",
+      "lead": "Người phụ trách",
+      "members": "Thành viên",
+      "dates": "Ngày tháng",
+      "start_date": "Ngày bắt đầu",
+      "target_date": "Ngày mục tiêu",
+      "no_lead": "Chưa có người phụ trách",
+      "add_members": "Thêm thành viên",
+      "save_error": "Không thể lưu thay đổi. Vui lòng thử lại.",
+      "dates_error": "Ngày mục tiêu không được sớm hơn ngày bắt đầu.",
+      "milestones": "Cột mốc",
+      "add_milestone": "Thêm cột mốc",
+      "no_milestone": "Không có cột mốc",
+      "no_milestones": "Chưa có cột mốc nào",
+      "milestone_progress": "{percent}% của {total}",
+      "progress": "Tiến độ",
+      "scope": "Phạm vi",
+      "started": "Đã bắt đầu",
+      "completed": "Đã hoàn thành",
+      "assignees": "Người được giao",
+      "labels": "Nhãn",
+      "no_assignee": "Chưa được giao",
+      "no_label": "Không có nhãn",
+      "no_work_items": "Chưa có mục công việc nào",
+      "activity": "Hoạt động",
+      "see_all": "Xem tất cả",
+      "no_activity": "Chưa có hoạt động",
+      "activity_item": {
+        "milestone_created": "{actor} đã thêm cột mốc {name}",
+        "milestone_deleted": "{actor} đã xóa cột mốc {name}",
+        "milestone_renamed": "{actor} đã đổi tên cột mốc {old} thành {name}",
+        "milestone_target_date": "{actor} đã đặt ngày mục tiêu của cột mốc {name} thành {value}",
+        "status": "{actor} đã đổi trạng thái thành {value}",
+        "priority": "{actor} đã đổi mức ưu tiên thành {value}",
+        "start_date": "{actor} đã đặt ngày bắt đầu thành {value}",
+        "target_date": "{actor} đã đặt ngày mục tiêu thành {value}",
+        "lead": "{actor} đã đổi người phụ trách thành {value}",
+        "someone": "Ai đó",
+        "a_milestone": "một cột mốc",
+        "none": "không có"
+      }
+    },
+    "project_status": {
+      "backlog": "Tồn đọng",
+      "planned": "Đã lên kế hoạch",
+      "in_progress": "Đang tiến hành",
+      "paused": "Đã tạm dừng",
+      "completed": "Đã hoàn thành",
+      "cancelled": "Đã hủy"
+    },
+    "project_priority": {
+      "urgent": "Khẩn cấp",
+      "high": "Cao",
+      "medium": "Trung bình",
+      "low": "Thấp",
+      "none": "Không có ưu tiên"
+    },
+    "projects": {
+      "status": "Trạng thái",
+      "priority": "Ưu tiên",
+      "order_target_date": "Ngày mục tiêu",
+      "order_start_date": "Ngày bắt đầu",
+      "order_priority": "Ưu tiên",
+      "order_status": "Trạng thái",
+      "progress": "Đã hoàn thành {completed} trên {total}"
+    }
+  }
+}

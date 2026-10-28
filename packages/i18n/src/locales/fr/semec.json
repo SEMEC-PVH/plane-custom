@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Panneau du projet",
+      "properties": "Propriétés",
+      "status": "Statut",
+      "priority": "Priorité",
+      "lead": "Responsable",
+      "members": "Membres",
+      "dates": "Dates",
+      "start_date": "Date de début",
+      "target_date": "Date cible",
+      "no_lead": "Aucun responsable",
+      "add_members": "Ajouter des membres",
+      "save_error": "Impossible d’enregistrer la modification. Réessayez.",
+      "dates_error": "La date cible ne peut pas être antérieure à la date de début.",
+      "milestones": "Jalons",
+      "add_milestone": "Ajouter un jalon",
+      "no_milestone": "Aucun jalon",
+      "no_milestones": "Aucun jalon pour le moment",
+      "milestone_progress": "{percent} % sur {total}",
+      "progress": "Progression",
+      "scope": "Périmètre",
+      "started": "Commencés",
+      "completed": "Terminés",
+      "assignees": "Acteurs",
+      "labels": "Étiquettes",
+      "no_assignee": "Aucun acteur",
+      "no_label": "Aucune étiquette",
+      "no_work_items": "Aucun élément de travail pour le moment",
+      "activity": "Activité",
+      "see_all": "Tout afficher",
+      "no_activity": "Aucune activité pour le moment",
+      "activity_item": {
+        "milestone_created": "{actor} a ajouté le jalon {name}",
+        "milestone_deleted": "{actor} a supprimé le jalon {name}",
+        "milestone_renamed": "{actor} a renommé le jalon {old} en {name}",
+        "milestone_target_date": "{actor} a défini la date cible du jalon {name} sur {value}",
+        "status": "{actor} a changé le statut en {value}",
+        "priority": "{actor} a changé la priorité en {value}",
+        "start_date": "{actor} a défini la date de début sur {value}",
+        "target_date": "{actor} a défini la date cible sur {value}",
+        "lead": "{actor} a changé le responsable en {value}",
+        "someone": "Quelqu’un",
+        "a_milestone": "un jalon",
+        "none": "aucun"
+      }
+    },
+    "project_status": {
+      "backlog": "Backlog",
+      "planned": "Planifié",
+      "in_progress": "En cours",
+      "paused": "En pause",
+      "completed": "Terminé",
+      "cancelled": "Annulé"
+    },
+    "project_priority": {
+      "urgent": "Urgent",
+      "high": "Haute",
+      "medium": "Moyenne",
+      "low": "Basse",
+      "none": "Aucune priorité"
+    },
+    "projects": {
+      "status": "Statut",
+      "priority": "Priorité",
+      "order_target_date": "Date cible",
+      "order_start_date": "Date de début",
+      "order_priority": "Priorité",
+      "order_status": "Statut",
+      "progress": "{completed} sur {total} terminés"
+    }
+  }
+}

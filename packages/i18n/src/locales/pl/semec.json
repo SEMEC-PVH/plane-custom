@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Panel projektu",
+      "properties": "Właściwości",
+      "status": "Status",
+      "priority": "Priorytet",
+      "lead": "Lider",
+      "members": "Członkowie",
+      "dates": "Daty",
+      "start_date": "Data rozpoczęcia",
+      "target_date": "Data docelowa",
+      "no_lead": "Brak lidera",
+      "add_members": "Dodaj członków",
+      "save_error": "Nie udało się zapisać zmiany. Prosimy spróbować ponownie.",
+      "dates_error": "Data docelowa nie może być wcześniejsza niż data rozpoczęcia.",
+      "milestones": "Kamienie milowe",
+      "add_milestone": "Dodaj kamień milowy",
+      "no_milestone": "Brak kamienia milowego",
+      "no_milestones": "Brak kamieni milowych",
+      "milestone_progress": "{percent}% z {total}",
+      "progress": "Postęp",
+      "scope": "Zakres",
+      "started": "Rozpoczęte",
+      "completed": "Ukończone",
+      "assignees": "Przypisani",
+      "labels": "Etykiety",
+      "no_assignee": "Brak przypisanego",
+      "no_label": "Brak etykiety",
+      "no_work_items": "Brak elementów pracy",
+      "activity": "Aktywność",
+      "see_all": "Pokaż wszystko",
+      "no_activity": "Brak aktywności",
+      "activity_item": {
+        "milestone_created": "{actor} dodał(a) kamień milowy {name}",
+        "milestone_deleted": "{actor} usunął/usunęła kamień milowy {name}",
+        "milestone_renamed": "{actor} zmienił(a) nazwę kamienia milowego {old} na {name}",
+        "milestone_target_date": "{actor} ustawił(a) datę docelową kamienia milowego {name} na {value}",
+        "status": "{actor} zmienił(a) status na {value}",
+        "priority": "{actor} zmienił(a) priorytet na {value}",
+        "start_date": "{actor} ustawił(a) datę rozpoczęcia na {value}",
+        "target_date": "{actor} ustawił(a) datę docelową na {value}",
+        "lead": "{actor} zmienił(a) lidera na {value}",
+        "someone": "Ktoś",
+        "a_milestone": "kamień milowy",
+        "none": "brak"
+      }
+    },
+    "project_status": {
+      "backlog": "Backlog",
+      "planned": "Planowane",
+      "in_progress": "W trakcie",
+      "paused": "Wstrzymane",
+      "completed": "Ukończone",
+      "cancelled": "Anulowane"
+    },
+    "project_priority": {
+      "urgent": "Pilny",
+      "high": "Wysoki",
+      "medium": "Średni",
+      "low": "Niski",
+      "none": "Brak priorytetu"
+    },
+    "projects": {
+      "status": "Status",
+      "priority": "Priorytet",
+      "order_target_date": "Data docelowa",
+      "order_start_date": "Data rozpoczęcia",
+      "order_priority": "Priorytet",
+      "order_status": "Status",
+      "progress": "Ukończono {completed} z {total}"
+    }
+  }
+}

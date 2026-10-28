@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Panel proyek",
+      "properties": "Properti",
+      "status": "Status",
+      "priority": "Prioritas",
+      "lead": "Pemimpin",
+      "members": "Anggota",
+      "dates": "Tanggal",
+      "start_date": "Tanggal mulai",
+      "target_date": "Tanggal target",
+      "no_lead": "Tidak ada pemimpin",
+      "add_members": "Tambah anggota",
+      "save_error": "Tidak dapat menyimpan perubahan. Silakan coba lagi.",
+      "dates_error": "Tanggal target tidak boleh lebih awal dari tanggal mulai.",
+      "milestones": "Tonggak",
+      "add_milestone": "Tambah tonggak",
+      "no_milestone": "Tidak ada tonggak",
+      "no_milestones": "Belum ada tonggak",
+      "milestone_progress": "{percent}% dari {total}",
+      "progress": "Kemajuan",
+      "scope": "Cakupan",
+      "started": "Dimulai",
+      "completed": "Selesai",
+      "assignees": "Penugas",
+      "labels": "Label",
+      "no_assignee": "Tidak ada penugas",
+      "no_label": "Tidak ada label",
+      "no_work_items": "Belum ada item kerja",
+      "activity": "Aktivitas",
+      "see_all": "Lihat semua",
+      "no_activity": "Belum ada aktivitas",
+      "activity_item": {
+        "milestone_created": "{actor} menambahkan tonggak {name}",
+        "milestone_deleted": "{actor} menghapus tonggak {name}",
+        "milestone_renamed": "{actor} mengganti nama tonggak {old} menjadi {name}",
+        "milestone_target_date": "{actor} menetapkan tanggal target tonggak {name} ke {value}",
+        "status": "{actor} mengubah status menjadi {value}",
+        "priority": "{actor} mengubah prioritas menjadi {value}",
+        "start_date": "{actor} menetapkan tanggal mulai ke {value}",
+        "target_date": "{actor} menetapkan tanggal target ke {value}",
+        "lead": "{actor} mengubah pemimpin menjadi {value}",
+        "someone": "Seseorang",
+        "a_milestone": "sebuah tonggak",
+        "none": "tidak ada"
+      }
+    },
+    "project_status": {
+      "backlog": "Backlog",
+      "planned": "Direncanakan",
+      "in_progress": "Dalam proses",
+      "paused": "Dijeda",
+      "completed": "Selesai",
+      "cancelled": "Dibatalkan"
+    },
+    "project_priority": {
+      "urgent": "Mendesak",
+      "high": "Tinggi",
+      "medium": "Sedang",
+      "low": "Rendah",
+      "none": "Tanpa prioritas"
+    },
+    "projects": {
+      "status": "Status",
+      "priority": "Prioritas",
+      "order_target_date": "Tanggal target",
+      "order_start_date": "Tanggal mulai",
+      "order_priority": "Prioritas",
+      "order_status": "Status",
+      "progress": "{completed} dari {total} selesai"
+    }
+  }
+}

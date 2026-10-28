@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Panel projektu",
+      "properties": "Vlastnosti",
+      "status": "Stav",
+      "priority": "Priorita",
+      "lead": "Vedoucí",
+      "members": "Členové",
+      "dates": "Data",
+      "start_date": "Datum začátku",
+      "target_date": "Cílové datum",
+      "no_lead": "Bez vedoucího",
+      "add_members": "Přidat členy",
+      "save_error": "Změnu se nepodařilo uložit. Zkuste to znovu.",
+      "dates_error": "Cílové datum nemůže být dříve než datum začátku.",
+      "milestones": "Milníky",
+      "add_milestone": "Přidat milník",
+      "no_milestone": "Bez milníku",
+      "no_milestones": "Zatím žádné milníky",
+      "milestone_progress": "{percent} % z {total}",
+      "progress": "Pokrok",
+      "scope": "Rozsah",
+      "started": "Zahájené",
+      "completed": "Dokončené",
+      "assignees": "Přiřazení",
+      "labels": "Štítky",
+      "no_assignee": "Žádné přiřazení",
+      "no_label": "Bez štítku",
+      "no_work_items": "Zatím žádné pracovní položky",
+      "activity": "Aktivita",
+      "see_all": "Zobrazit vše",
+      "no_activity": "Zatím žádná aktivita",
+      "activity_item": {
+        "milestone_created": "{actor} přidal(a) milník {name}",
+        "milestone_deleted": "{actor} odebral(a) milník {name}",
+        "milestone_renamed": "{actor} přejmenoval(a) milník {old} na {name}",
+        "milestone_target_date": "{actor} nastavil(a) cílové datum milníku {name} na {value}",
+        "status": "{actor} změnil(a) stav na {value}",
+        "priority": "{actor} změnil(a) prioritu na {value}",
+        "start_date": "{actor} nastavil(a) datum začátku na {value}",
+        "target_date": "{actor} nastavil(a) cílové datum na {value}",
+        "lead": "{actor} změnil(a) vedoucího na {value}",
+        "someone": "Někdo",
+        "a_milestone": "milník",
+        "none": "žádné"
+      }
+    },
+    "project_status": {
+      "backlog": "Backlog",
+      "planned": "Plánováno",
+      "in_progress": "V průběhu",
+      "paused": "Pozastaveno",
+      "completed": "Dokončeno",
+      "cancelled": "Zrušeno"
+    },
+    "project_priority": {
+      "urgent": "Naléhavá",
+      "high": "Vysoká",
+      "medium": "Střední",
+      "low": "Nízká",
+      "none": "Bez priority"
+    },
+    "projects": {
+      "status": "Stav",
+      "priority": "Priorita",
+      "order_target_date": "Cílové datum",
+      "order_start_date": "Datum začátku",
+      "order_priority": "Priorita",
+      "order_status": "Stav",
+      "progress": "Dokončeno {completed} z {total}"
+    }
+  }
+}

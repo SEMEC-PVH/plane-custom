@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Panel del proyecto",
+      "properties": "Propiedades",
+      "status": "Estado",
+      "priority": "Prioridad",
+      "lead": "Líder",
+      "members": "Miembros",
+      "dates": "Fechas",
+      "start_date": "Fecha de inicio",
+      "target_date": "Fecha objetivo",
+      "no_lead": "Sin líder",
+      "add_members": "Agregar miembros",
+      "save_error": "No se pudo guardar el cambio. Inténtelo de nuevo.",
+      "dates_error": "La fecha objetivo no puede ser anterior a la fecha de inicio.",
+      "milestones": "Hitos",
+      "add_milestone": "Agregar hito",
+      "no_milestone": "Sin hito",
+      "no_milestones": "Aún no hay hitos",
+      "milestone_progress": "{percent}% de {total}",
+      "progress": "Progreso",
+      "scope": "Alcance",
+      "started": "Iniciados",
+      "completed": "Completados",
+      "assignees": "Asignados",
+      "labels": "Etiquetas",
+      "no_assignee": "Sin asignado",
+      "no_label": "Sin etiqueta",
+      "no_work_items": "Aún no hay elementos de trabajo",
+      "activity": "Actividad",
+      "see_all": "Ver todo",
+      "no_activity": "Aún no hay actividad",
+      "activity_item": {
+        "milestone_created": "{actor} agregó el hito {name}",
+        "milestone_deleted": "{actor} eliminó el hito {name}",
+        "milestone_renamed": "{actor} cambió el nombre del hito {old} a {name}",
+        "milestone_target_date": "{actor} estableció la fecha objetivo del hito {name} en {value}",
+        "status": "{actor} cambió el estado a {value}",
+        "priority": "{actor} cambió la prioridad a {value}",
+        "start_date": "{actor} estableció la fecha de inicio en {value}",
+        "target_date": "{actor} estableció la fecha objetivo en {value}",
+        "lead": "{actor} cambió el líder a {value}",
+        "someone": "Alguien",
+        "a_milestone": "un hito",
+        "none": "ninguno"
+      }
+    },
+    "project_status": {
+      "backlog": "Pendientes",
+      "planned": "Planificado",
+      "in_progress": "En progreso",
+      "paused": "Pausado",
+      "completed": "Completado",
+      "cancelled": "Cancelado"
+    },
+    "project_priority": {
+      "urgent": "Urgente",
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Baja",
+      "none": "Sin prioridad"
+    },
+    "projects": {
+      "status": "Estado",
+      "priority": "Prioridad",
+      "order_target_date": "Fecha objetivo",
+      "order_start_date": "Fecha de inicio",
+      "order_priority": "Prioridad",
+      "order_status": "Estado",
+      "progress": "{completed} de {total} completados"
+    }
+  }
+}

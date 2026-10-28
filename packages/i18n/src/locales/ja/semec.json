@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "プロジェクトパネル",
+      "properties": "プロパティ",
+      "status": "ステータス",
+      "priority": "優先度",
+      "lead": "リード",
+      "members": "メンバー",
+      "dates": "日付",
+      "start_date": "開始日",
+      "target_date": "目標日",
+      "no_lead": "リードなし",
+      "add_members": "メンバーを追加",
+      "save_error": "変更を保存できませんでした。もう一度お試しください。",
+      "dates_error": "目標日を開始日より前に設定することはできません。",
+      "milestones": "マイルストーン",
+      "add_milestone": "マイルストーンを追加",
+      "no_milestone": "マイルストーンなし",
+      "no_milestones": "マイルストーンはまだありません",
+      "milestone_progress": "{total}件中{percent}%",
+      "progress": "進捗",
+      "scope": "スコープ",
+      "started": "開始済み",
+      "completed": "完了",
+      "assignees": "担当者",
+      "labels": "ラベル",
+      "no_assignee": "担当者なし",
+      "no_label": "ラベルなし",
+      "no_work_items": "作業項目はまだありません",
+      "activity": "アクティビティ",
+      "see_all": "すべて表示",
+      "no_activity": "アクティビティはまだありません",
+      "activity_item": {
+        "milestone_created": "{actor}がマイルストーン{name}を追加しました",
+        "milestone_deleted": "{actor}がマイルストーン{name}を削除しました",
+        "milestone_renamed": "{actor}がマイルストーン{old}の名前を{name}に変更しました",
+        "milestone_target_date": "{actor}がマイルストーン{name}の目標日を{value}に設定しました",
+        "status": "{actor}がステータスを{value}に変更しました",
+        "priority": "{actor}が優先度を{value}に変更しました",
+        "start_date": "{actor}が開始日を{value}に設定しました",
+        "target_date": "{actor}が目標日を{value}に設定しました",
+        "lead": "{actor}がリードを{value}に変更しました",
+        "someone": "誰か",
+        "a_milestone": "マイルストーン",
+        "none": "なし"
+      }
+    },
+    "project_status": {
+      "backlog": "バックログ",
+      "planned": "計画済み",
+      "in_progress": "進行中",
+      "paused": "一時停止",
+      "completed": "完了",
+      "cancelled": "キャンセル"
+    },
+    "project_priority": {
+      "urgent": "緊急",
+      "high": "高",
+      "medium": "中",
+      "low": "低",
+      "none": "優先度なし"
+    },
+    "projects": {
+      "status": "ステータス",
+      "priority": "優先度",
+      "order_target_date": "目標日",
+      "order_start_date": "開始日",
+      "order_priority": "優先度",
+      "order_status": "ステータス",
+      "progress": "{total}件中{completed}件完了"
+    }
+  }
+}

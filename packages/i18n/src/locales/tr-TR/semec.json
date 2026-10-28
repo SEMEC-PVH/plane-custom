@@ -1,1 +1,74 @@
-{}
+{
+  "semec": {
+    "project_panel": {
+      "toggle": "Proje paneli",
+      "properties": "Özellikler",
+      "status": "Durum",
+      "priority": "Öncelik",
+      "lead": "Lider",
+      "members": "Üyeler",
+      "dates": "Tarihler",
+      "start_date": "Başlangıç tarihi",
+      "target_date": "Hedef tarih",
+      "no_lead": "Lider yok",
+      "add_members": "Üye ekle",
+      "save_error": "Değişiklik kaydedilemedi. Lütfen tekrar deneyin.",
+      "dates_error": "Hedef tarih, başlangıç tarihinden önce olamaz.",
+      "milestones": "Kilometre taşları",
+      "add_milestone": "Kilometre taşı ekle",
+      "no_milestone": "Kilometre taşı yok",
+      "no_milestones": "Henüz kilometre taşı yok",
+      "milestone_progress": "{total} içinden %{percent}",
+      "progress": "İlerleme",
+      "scope": "Kapsam",
+      "started": "Başlatılan",
+      "completed": "Tamamlanan",
+      "assignees": "Atananlar",
+      "labels": "Etiketler",
+      "no_assignee": "Atanan yok",
+      "no_label": "Etiket yok",
+      "no_work_items": "Henüz iş öğesi yok",
+      "activity": "Aktivite",
+      "see_all": "Tümünü göster",
+      "no_activity": "Henüz aktivite yok",
+      "activity_item": {
+        "milestone_created": "{actor}, {name} kilometre taşını ekledi",
+        "milestone_deleted": "{actor}, {name} kilometre taşını kaldırdı",
+        "milestone_renamed": "{actor}, {old} kilometre taşının adını {name} olarak değiştirdi",
+        "milestone_target_date": "{actor}, {name} kilometre taşının hedef tarihini {value} olarak ayarladı",
+        "status": "{actor}, durumu {value} olarak değiştirdi",
+        "priority": "{actor}, önceliği {value} olarak değiştirdi",
+        "start_date": "{actor}, başlangıç tarihini {value} olarak ayarladı",
+        "target_date": "{actor}, hedef tarihi {value} olarak ayarladı",
+        "lead": "{actor}, lideri {value} olarak değiştirdi",
+        "someone": "Biri",
+        "a_milestone": "bir kilometre taşı",
+        "none": "yok"
+      }
+    },
+    "project_status": {
+      "backlog": "Bekleme listesi",
+      "planned": "Planlandı",
+      "in_progress": "Devam ediyor",
+      "paused": "Duraklatıldı",
+      "completed": "Tamamlandı",
+      "cancelled": "İptal edildi"
+    },
+    "project_priority": {
+      "urgent": "Acil",
+      "high": "Yüksek",
+      "medium": "Orta",
+      "low": "Düşük",
+      "none": "Öncelik yok"
+    },
+    "projects": {
+      "status": "Durum",
+      "priority": "Öncelik",
+      "order_target_date": "Hedef tarih",
+      "order_start_date": "Başlangıç tarihi",
+      "order_priority": "Öncelik",
+      "order_status": "Durum",
+      "progress": "{total} öğeden {completed} tanesi tamamlandı"
+    }
+  }
+}
