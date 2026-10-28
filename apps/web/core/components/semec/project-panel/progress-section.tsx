@@ -8,7 +8,7 @@ import { observer } from "mobx-react";
 import useSWR from "swr";
 import { useTranslation } from "@plane/i18n";
 import { EIssuesStoreType } from "@plane/types";
-import { cn, toFilterArray } from "@plane/utils";
+import { cn } from "@plane/utils";
 import { createFilterUpdateHandler } from "@/components/core/sidebar/progress-stats/shared";
 import { useSemecProjectPanel } from "@/hooks/store/semec/use-semec-project-panel";
 import { useWorkItemFilters } from "@/hooks/store/work-item-filters/use-work-item-filters";
@@ -16,7 +16,7 @@ import { getProgressKey } from "@/store/semec/project-panel.store";
 import { SemecProgressChart } from "./progress-chart";
 import { SemecProgressDistribution } from "./progress-distribution";
 import { SemecPanelSection } from "./section";
-import { useSemecSelectedMilestone } from "./use-selected-milestone";
+import { useSemecProjectFilterValues, useSemecSelectedMilestone } from "./use-selected-milestone";
 
 type Props = {
   workspaceSlug: string;
@@ -28,18 +28,15 @@ export const SemecProgressSection = observer(function SemecProgressSection(props
   const { t } = useTranslation();
   // store hooks
   const { progressMap, fetchProgress } = useSemecProjectPanel();
-  const { getFilter, updateFilterValueFromSidebar } = useWorkItemFilters();
+  const { updateFilterValueFromSidebar } = useWorkItemFilters();
   // derived values
   const moduleId = useSemecSelectedMilestone(projectId);
   const progress = progressMap[getProgressKey(projectId, moduleId)];
-  const filter = getFilter(EIssuesStoreType.PROJECT, projectId);
   const selectedIds = {
-    assignee_id: toFilterArray(filter?.findFirstConditionByPropertyAndOperator("assignee_id", "in")?.value ?? []),
-    label_id: toFilterArray(filter?.findFirstConditionByPropertyAndOperator("label_id", "in")?.value ?? []),
-  } as Record<"assignee_id" | "label_id", string[]>;
-  const selectedStateGroups = toFilterArray(
-    filter?.findFirstConditionByPropertyAndOperator("state_group", "in")?.value ?? []
-  ) as string[];
+    assignee_id: useSemecProjectFilterValues(projectId, "assignee_id"),
+    label_id: useSemecProjectFilterValues(projectId, "label_id"),
+  };
+  const selectedStateGroups = useSemecProjectFilterValues(projectId, "state_group");
 
   // the whole-project progress is fetched by the panel root; a selected milestone has its own
   useSWR(
