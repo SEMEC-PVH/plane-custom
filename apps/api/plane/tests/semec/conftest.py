@@ -48,7 +48,9 @@ def states(project):
         ("Cancelled", "cancelled"),
     ]
     return {
-        group: State.objects.create(name=name, group=group, color="#000000", project=project, default=group == "backlog")
+        group: State.objects.create(
+            name=name, group=group, color="#000000", project=project, default=group == "backlog"
+        )
         for name, group in groups
     }
 

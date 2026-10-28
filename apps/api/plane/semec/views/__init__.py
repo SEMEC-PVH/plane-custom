@@ -5,3 +5,4 @@
 from .activity import ProjectActivityEndpoint
 from .progress import ProjectProgressEndpoint
 from .properties import ProjectPropertiesEndpoint
+from .workspace import WorkspaceProjectSummaryEndpoint

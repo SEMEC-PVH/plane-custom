@@ -22,9 +22,7 @@ def serialize_activity(activity):
         "id": str(activity.id),
         "created_at": activity.created_at,
         "actor": (
-            {"id": str(actor.id), "display_name": actor.display_name, "avatar_url": actor.avatar_url}
-            if actor
-            else None
+            {"id": str(actor.id), "display_name": actor.display_name, "avatar_url": actor.avatar_url} if actor else None
         ),
         "verb": activity.verb,
         "field": activity.field,
