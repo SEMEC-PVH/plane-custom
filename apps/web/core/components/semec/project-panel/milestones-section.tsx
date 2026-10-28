@@ -20,6 +20,7 @@ import { useWorkItemFilters } from "@/hooks/store/work-item-filters/use-work-ite
 import { getProgressKey } from "@/store/semec/project-panel.store";
 import { SemecMilestoneRow } from "./milestone-row";
 import { SemecPanelSection } from "./section";
+import { useSemecSelectedMilestone } from "./use-selected-milestone";
 
 // Milestones with a target date first (soonest first), then the rest by name
 export const sortMilestones = (modules: IModule[]) =>
@@ -41,7 +42,7 @@ export const SemecMilestonesSection = observer(function SemecMilestonesSection(p
   const [isCreateOpen, setIsCreateOpen] = useState(false);
   // store hooks
   const { fetchModules, getProjectModuleIds, getModuleById } = useModule();
-  const { progressMap, selectedModuleId, setSelectedModule } = useSemecProjectPanel();
+  const { progressMap } = useSemecProjectPanel();
   const { updateFilterValueFromSidebar } = useWorkItemFilters();
   const { allowPermissions } = useUserPermissions();
 
@@ -55,7 +56,7 @@ export const SemecMilestonesSection = observer(function SemecMilestonesSection(p
       .map((moduleId) => getModuleById(moduleId))
       .filter((module): module is IModule => !!module && !module.archived_at)
   );
-  const selected = selectedModuleId[projectId] ?? null;
+  const selected = useSemecSelectedMilestone(projectId);
   const noMilestone = progressMap[getProgressKey(projectId)]?.no_milestone;
   const canCreate = allowPermissions(
     [EUserPermissions.ADMIN, EUserPermissions.MEMBER],
@@ -66,7 +67,6 @@ export const SemecMilestonesSection = observer(function SemecMilestonesSection(p
 
   const handleSelect = (moduleId: string) => {
     const next = selected === moduleId ? null : moduleId;
-    setSelectedModule(projectId, next);
     updateFilterValueFromSidebar(EIssuesStoreType.PROJECT, projectId, {
       property: "module_id",
       operator: "in",

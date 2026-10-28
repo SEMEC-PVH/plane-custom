@@ -16,6 +16,7 @@ import { getProgressKey } from "@/store/semec/project-panel.store";
 import { SemecProgressChart } from "./progress-chart";
 import { SemecProgressDistribution } from "./progress-distribution";
 import { SemecPanelSection } from "./section";
+import { useSemecSelectedMilestone } from "./use-selected-milestone";
 
 type Props = {
   workspaceSlug: string;
@@ -26,10 +27,10 @@ export const SemecProgressSection = observer(function SemecProgressSection(props
   const { workspaceSlug, projectId } = props;
   const { t } = useTranslation();
   // store hooks
-  const { progressMap, selectedModuleId, fetchProgress } = useSemecProjectPanel();
+  const { progressMap, fetchProgress } = useSemecProjectPanel();
   const { getFilter, updateFilterValueFromSidebar } = useWorkItemFilters();
   // derived values
-  const moduleId = selectedModuleId[projectId] ?? null;
+  const moduleId = useSemecSelectedMilestone(projectId);
   const progress = progressMap[getProgressKey(projectId, moduleId)];
   const filter = getFilter(EIssuesStoreType.PROJECT, projectId);
   const selectedIds = {

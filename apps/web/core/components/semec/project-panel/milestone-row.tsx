@@ -46,7 +46,9 @@ export const SemecMilestoneRow = observer(function SemecMilestoneRow(props: Prop
   const { workspaceSlug, projectId, module, isSelected, onSelect } = props;
   const { t } = useTranslation();
   const parentRef = useRef<HTMLDivElement>(null);
-  const percent = getCompletionPercent(module.completed_issues, module.total_issues);
+  // cancelled items are out of scope, as in the Progress section
+  const total = module.total_issues - module.cancelled_issues;
+  const percent = getCompletionPercent(module.completed_issues, total);
 
   return (
     <div
@@ -64,7 +66,7 @@ export const SemecMilestoneRow = observer(function SemecMilestoneRow(props: Prop
         <ProgressDiamond percent={percent} />
         <span className="min-w-0 flex-1 truncate text-13 text-primary">{module.name}</span>
         <span className="flex-shrink-0 text-12 text-tertiary">
-          {t("semec.project_panel.milestone_progress", { percent, total: module.total_issues })}
+          {t("semec.project_panel.milestone_progress", { percent, total })}
         </span>
         <span className="w-12 flex-shrink-0 text-right text-12 text-secondary">
           {module.target_date ? renderFormattedDate(module.target_date, "MMM d") : ""}

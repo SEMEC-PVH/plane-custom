@@ -22,7 +22,6 @@ export interface ISemecProjectPanelStore {
   progressMap: Record<string, TSemecProjectProgress>;
   activityMap: Record<string, TSemecProjectActivity[]>;
   summaryMap: Record<string, TSemecProjectSummary>;
-  selectedModuleId: Record<string, string | null>;
   // actions
   fetchProperties: (workspaceSlug: string, projectId: string) => Promise<TSemecProjectProperties>;
   updateProperties: (
@@ -33,7 +32,6 @@ export interface ISemecProjectPanelStore {
   fetchProgress: (workspaceSlug: string, projectId: string, moduleId?: string) => Promise<TSemecProjectProgress>;
   fetchActivity: (workspaceSlug: string, projectId: string, limit?: number) => Promise<TSemecProjectActivity[]>;
   fetchSummaries: (workspaceSlug: string) => Promise<TSemecProjectSummary[]>;
-  setSelectedModule: (projectId: string, moduleId: string | null) => void;
 }
 
 export class SemecProjectPanelStore implements ISemecProjectPanelStore {
@@ -41,7 +39,6 @@ export class SemecProjectPanelStore implements ISemecProjectPanelStore {
   progressMap: Record<string, TSemecProjectProgress> = {};
   activityMap: Record<string, TSemecProjectActivity[]> = {};
   summaryMap: Record<string, TSemecProjectSummary> = {};
-  selectedModuleId: Record<string, string | null> = {};
   // services
   service = new SemecProjectPanelService();
 
@@ -51,13 +48,11 @@ export class SemecProjectPanelStore implements ISemecProjectPanelStore {
       progressMap: observable,
       activityMap: observable,
       summaryMap: observable,
-      selectedModuleId: observable,
       fetchProperties: action,
       updateProperties: action,
       fetchProgress: action,
       fetchActivity: action,
       fetchSummaries: action,
-      setSelectedModule: action,
     });
   }
 
@@ -110,9 +105,5 @@ export class SemecProjectPanelStore implements ISemecProjectPanelStore {
       this.summaryMap = Object.fromEntries(summaries.map((summary) => [summary.project_id, summary]));
     });
     return summaries;
-  };
-
-  setSelectedModule = (projectId: string, moduleId: string | null) => {
-    this.selectedModuleId[projectId] = moduleId;
   };
 }
