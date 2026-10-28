@@ -32,10 +32,11 @@ export const sortMilestones = (modules: IModule[]) =>
 type Props = {
   workspaceSlug: string;
   projectId: string;
+  onChanged: () => void;
 };
 
 export const SemecMilestonesSection = observer(function SemecMilestonesSection(props: Props) {
-  const { workspaceSlug, projectId } = props;
+  const { workspaceSlug, projectId, onChanged } = props;
   const { t } = useTranslation();
   const [isCreateOpen, setIsCreateOpen] = useState(false);
   // store hooks
@@ -101,7 +102,10 @@ export const SemecMilestonesSection = observer(function SemecMilestonesSection(p
       )}
       <CreateUpdateModuleModal
         isOpen={isCreateOpen}
-        onClose={() => setIsCreateOpen(false)}
+        onClose={() => {
+          setIsCreateOpen(false);
+          onChanged();
+        }}
         workspaceSlug={workspaceSlug}
         projectId={projectId}
       />
