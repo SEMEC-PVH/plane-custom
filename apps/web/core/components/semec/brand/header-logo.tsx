@@ -11,8 +11,8 @@ import { SemecEmblem, SemecLockup } from "@plane/propel/icons";
 export function SemecHeaderLogo() {
   return (
     <Link href="/" className="mr-2 flex shrink-0 items-center border-r border-subtle pr-3">
-      <SemecLockup height={32} className="hidden lg:block" />
-      <SemecEmblem height={28} className="lg:hidden" title="SEMEC" />
+      <SemecLockup height={32} className="hidden xl:block" />
+      <SemecEmblem height={28} className="xl:hidden" title="SEMEC" />
     </Link>
   );
 }
