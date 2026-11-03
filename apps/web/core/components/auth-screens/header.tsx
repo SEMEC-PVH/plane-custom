@@ -65,8 +65,9 @@ type TAuthHeaderBase = {
   additionalAction?: React.ReactNode;
 };
 
-export function AuthHeaderBase(props: TAuthHeaderBase) {
-  // SEMEC: no top bar (Plane lockup and sign-up prompt); the form shows the SEMEC lockup
-  const { pageTitle } = props;
-  return <PageHead title={pageTitle + " - SEMEC"} />;
+export function AuthHeaderBase(_props: TAuthHeaderBase) {
+  // SEMEC: no top bar (Plane lockup and sign-up prompt); the form shows the SEMEC lockup.
+  // The tab shows the system name: Plane's page titles here are swapped and untranslated.
+  const { t } = useTranslation();
+  return <PageHead title={t("semec.auth.title")} />;
 }
