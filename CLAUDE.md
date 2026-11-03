@@ -7,7 +7,7 @@ Leia também o [AGENTS.md](AGENTS.md) (convenções do upstream: comandos, estil
 - Somos a equipe de TI da SEMEC (Secretaria Municipal de Economia de Porto Velho/RO), cerca de 7 pessoas.
 - Estamos substituindo o Linear pelo Plane Community Edition, fork de [makeplane/plane](https://github.com/makeplane/plane).
 - Hospedagem (ainda não está no ar): servidor da SMTI (TI da prefeitura), via Portainer, versão `v1.4.2`. A stack deriva de `deployments/cli/community/docker-compose.yml`.
-- O fork existe para customizações futuras. Enquanto não houver customização, a stack usa só imagens oficiais do Docker Hub.
+- O fork existe para customizações. `web` e o backend (`api`, `worker`, `beat-worker`, `migrator`) usam as imagens do registry do Gitea (`git.portovelho.ro.gov.br/semec/plane-frontend` e `plane-backend`, tag `${SEMEC_RELEASE:-v1.4.2-semec}`); os demais serviços seguem nas imagens oficiais do Docker Hub.
 - Remotes: `origin` = SEMEC-PVH/plane-custom (GitHub, segue ativo), `gitea` = <https://git.portovelho.ro.gov.br/semec/Plane-semec.git>, `upstream` = makeplane/plane. Branch de trabalho: `semec`.
 - Implantação: a stack sobe no Portainer pelo web editor, com as imagens oficiais da `v1.4.2` (`APP_RELEASE=v1.4.2`) e as variáveis no painel de variáveis da stack. O compose da stack é `deployments/semec/docker-compose.yml` (o oficial com duas mudanças: proxy só em HTTP na porta 8080, atrás do proxy da SMTI, e `pgsty/silo` no lugar da imagem `minio/minio`, que saiu do Docker Hub). O arquivo de variáveis, com as senhas, nunca vai para o Git.
 - No arquivo de variáveis, `CERT_ACME_CA` não pode ficar vazio (o Caddy do proxy não sobe); e `DATABASE_URL`/`AMQP_URL` precisam levar as mesmas senhas de `POSTGRES_PASSWORD`/`RABBITMQ_PASSWORD`.
