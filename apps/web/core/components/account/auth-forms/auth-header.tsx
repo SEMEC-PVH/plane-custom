@@ -90,7 +90,7 @@ export function AuthHeaderBase(props: TAuthHeaderBase) {
     // SEMEC: centered lockup, title and subtitle
     <div className="flex flex-col items-center text-center">
       <div className="mb-7 flex justify-center">
-        <SemecLockup height={64} />
+        <SemecLockup height={64} className="h-auto max-w-full" />
       </div>
       <span className="text-[28px] leading-tight font-semibold text-primary">{props.header}</span>
       <span className="mt-1.5 text-[15px] leading-normal text-secondary">{props.subHeader}</span>

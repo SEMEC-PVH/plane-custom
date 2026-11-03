@@ -26,7 +26,7 @@ export function SemecAuthShell({ children, showLockup = false }: TSemecAuthShell
       <div className="semec-auth-content relative z-[1] flex w-full flex-grow flex-col items-center">
         {showLockup && (
           <div className="mt-10 flex justify-center">
-            <SemecLockup height={64} />
+            <SemecLockup height={64} className="h-auto max-w-full" />
           </div>
         )}
         {children}
