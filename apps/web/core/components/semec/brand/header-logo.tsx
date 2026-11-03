@@ -5,13 +5,14 @@
  */
 
 import Link from "next/link";
-import { SemecLockup } from "@plane/propel/icons";
+import { SemecEmblem, SemecLockup } from "@plane/propel/icons";
 
-/** SEMEC lockup at the left of the top navigation bar. */
+/** SEMEC lockup at the left of the top navigation bar; only the symbol on narrow screens. */
 export function SemecHeaderLogo() {
   return (
     <Link href="/" className="mr-2 flex shrink-0 items-center border-r border-subtle pr-3">
-      <SemecLockup height={32} />
+      <SemecLockup height={32} className="hidden lg:block" />
+      <SemecEmblem height={28} className="lg:hidden" title="SEMEC" />
     </Link>
   );
 }
