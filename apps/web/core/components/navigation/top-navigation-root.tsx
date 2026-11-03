@@ -19,7 +19,7 @@ import { InboxIcon } from "@plane/propel/icons";
 import useSWR from "swr";
 import { useWorkspaceNotifications } from "@/hooks/store/notifications";
 // SEMEC
-import { SemecHeaderLogo } from "@/components/semec/brand";
+import { SemecHeaderLogo, SemecMobileSearchButton } from "@/components/semec/brand";
 
 export const TopNavigationRoot = observer(function TopNavigationRoot() {
   // router
@@ -57,8 +57,12 @@ export const TopNavigationRoot = observer(function TopNavigationRoot() {
         <WorkspaceMenuRoot variant="top-navigation" />
       </div>
       {/* Power K Search */}
-      <div className="shrink-0">
+      {/* SEMEC: the 364px search box does not fit on phones; there it is a button that opens the modal */}
+      <div className="hidden shrink-0 md:block">
         <TopNavPowerK />
+      </div>
+      <div className="shrink-0 md:hidden">
+        <SemecMobileSearchButton />
       </div>
       {/* Additional Actions */}
       <div className="flex flex-1 shrink-0 items-center justify-end gap-1">
