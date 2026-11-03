@@ -181,7 +181,7 @@ export const AuthPasswordForm = observer(function AuthPasswordForm(props: Props)
               type="email"
               value={passwordFormData.email}
               onChange={(e) => handleFormChange("email", e.target.value)}
-              placeholder={t("auth.common.email.placeholder")}
+              placeholder={t("semec.auth.email_placeholder")} // SEMEC
               className={`h-10 w-full border-0 disable-autofill-style placeholder:text-placeholder`}
               disabled
             />

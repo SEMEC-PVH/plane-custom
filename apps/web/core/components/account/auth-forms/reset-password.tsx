@@ -121,7 +121,7 @@ export const ResetPasswordForm = observer(function ResetPasswordForm() {
               type="email"
               value={resetFormData.email}
               //hasError={Boolean(errors.email)}
-              placeholder={t("auth.common.email.placeholder")}
+              placeholder={t("semec.auth.email_placeholder")} // SEMEC
               className="h-10 w-full cursor-not-allowed border border-strong !bg-surface-1 pr-12 text-placeholder"
               autoComplete="off"
               disabled

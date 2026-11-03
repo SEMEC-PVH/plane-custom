@@ -105,7 +105,7 @@ export function AuthUniqueCodeForm(props: TAuthUniqueCodeForm) {
             type="email"
             value={uniqueCodeFormData.email}
             onChange={(e) => handleFormChange("email", e.target.value)}
-            placeholder={t("auth.common.email.placeholder")}
+            placeholder={t("semec.auth.email_placeholder")} // SEMEC
             className="h-10 w-full border-0 disable-autofill-style placeholder:text-placeholder"
             autoComplete="off"
             disabled
