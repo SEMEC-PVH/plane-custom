@@ -136,7 +136,7 @@
   --semec-art-h: min(36vh, 360px);
 }
 
-/* short screens: a lower skyline keeps the form clear of it */
+/* short screens: a lower skyline lets the form and the skyline fit without scrolling */
 @media (max-height: 760px) {
   .semec-auth {
     --semec-art-h: min(28vh, 360px);
@@ -144,18 +144,15 @@
 }
 
 .semec-auth-content {
-  /* the form never reaches the skyline: art bottom (44px) − shell padding (40px) + 4px of air */
-  padding-bottom: calc(var(--semec-art-h) + 8px);
+  /* air between the form and the skyline */
+  padding-bottom: 24px;
 }
 
 .semec-auth-art {
-  position: absolute;
-  bottom: 44px;
-  left: 50%;
-  z-index: 0;
+  flex-shrink: 0;
+  align-self: center;
   width: min(100vw, calc(var(--semec-art-h) * 2.0757));
   height: var(--semec-art-h);
-  transform: translateX(-50%);
   pointer-events: none;
   -webkit-mask-image:
     linear-gradient(to top, transparent, #000 8%, #000 60%, transparent),

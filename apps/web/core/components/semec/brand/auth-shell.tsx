@@ -17,13 +17,16 @@ type TSemecAuthShell = {
   showLockup?: boolean;
 };
 
-/** Layout of the sign-in and account pages: content, Porto Velho skyline and the AGPL source footer. */
+/**
+ * Layout of the sign-in and account pages: content, Porto Velho skyline and the AGPL source footer,
+ * stacked in the page flow, so a taller form pushes the skyline down instead of covering it.
+ */
 export function SemecAuthShell({ children, showLockup = false }: TSemecAuthShell) {
   const { t } = useTranslation();
 
   return (
-    <div className="semec-auth relative z-10 flex h-screen w-screen flex-col items-center overflow-hidden overflow-y-auto px-8 pt-6 pb-10">
-      <div className="semec-auth-content relative z-[1] flex w-full flex-grow flex-col items-center">
+    <div className="semec-auth relative z-10 flex h-screen w-screen flex-col items-center overflow-hidden overflow-y-auto px-8 pt-6 pb-3.5">
+      <div className="semec-auth-content flex w-full flex-grow flex-col items-center">
         {showLockup && (
           <div className="mt-10 flex justify-center">
             <SemecLockup height={64} className="h-auto max-w-full" />
@@ -34,7 +37,7 @@ export function SemecAuthShell({ children, showLockup = false }: TSemecAuthShell
       <div className="semec-auth-art">
         <SemecPortoVelhoArt />
       </div>
-      <footer className="absolute right-0 bottom-3.5 left-0 z-[1] px-4 text-center text-12 text-tertiary">
+      <footer className="mt-3.5 shrink-0 text-center text-12 text-tertiary">
         {t("semec.auth.footer")}{" "}
         <a href={SOURCE_CODE_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
           {t("semec.auth.source_code")}
