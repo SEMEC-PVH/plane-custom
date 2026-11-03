@@ -49,7 +49,8 @@
 }
 
 /* ---------- Tema escuro: preto, com a identidade nos acentos ---------- */
-[data-theme="dark"] {
+/* só no :root: o Plane põe data-theme="dark" também em elementos (toasts) no tema dark-contrast */
+:root[data-theme="dark"] {
   --neutral-black: #000000;
   --neutral-100: #0a0a0b;
   --neutral-200: #111112;
@@ -105,7 +106,7 @@
   --semec-art-tint: #eef3f9;
 }
 
-[data-theme*="dark"] {
+:root[data-theme*="dark"] {
   --semec-art-line: #2c4670;
   --semec-art-tint: #0d1420;
 }
