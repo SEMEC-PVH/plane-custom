@@ -35,3 +35,23 @@ export function SemecProjectPanelToggle() {
     </Tooltip>
   );
 }
+
+/** Panel toggle for the mobile bar of the work items page, where the desktop filter bar is hidden. */
+export function SemecProjectPanelMobileToggle() {
+  const { t } = useTranslation();
+  const { isOpen, toggle } = useSemecProjectPanelOpen();
+
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      aria-label={t("semec.project_panel.toggle")}
+      aria-pressed={isOpen}
+      className={cn("flex flex-grow items-center justify-center border-l border-subtle text-secondary", {
+        "text-accent-primary": isOpen,
+      })}
+    >
+      <PanelRight className="size-4" />
+    </button>
+  );
+}

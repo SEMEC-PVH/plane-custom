@@ -20,6 +20,8 @@ import {
   FiltersDropdown,
   MobileLayoutSelection,
 } from "@/components/issues/issue-layouts/filters";
+// SEMEC
+import { SemecProjectPanelMobileToggle } from "@/components/semec/project-panel/toggle-button";
 // hooks
 import { useIssues } from "@/hooks/store/use-issues";
 import { useProject } from "@/hooks/store/use-project";
@@ -104,6 +106,8 @@ export const ProjectIssuesMobileHeader = observer(function ProjectIssuesMobileHe
         >
           {t("common.analytics")}
         </button>
+        {/* SEMEC */}
+        <SemecProjectPanelMobileToggle />
       </div>
     </>
   );
